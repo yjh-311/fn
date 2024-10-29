@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+const myapp = Vue.createApp({
     data() {
         return {
             projects: [],
