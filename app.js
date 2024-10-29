@@ -72,7 +72,7 @@ const myapp = Vue.createApp({
     }
 });
 
-app.mount('#myapp');
+myapp.mount('#myapp');
 
 
 //타이핑 효과
