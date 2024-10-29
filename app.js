@@ -1,6 +1,7 @@
 const myapp = Vue.createApp({
     data() {
         return {
+            lightOn: false,
             projects: [],
             newProject: {
                 name: '',
