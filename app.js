@@ -27,7 +27,7 @@ const app = Vue.createApp({
             };
 
             $.ajax({
-                url: `https://YOUR_PROJECT_ID.firebaseio.com/projects.json`,
+                url: `https://frontend-de63a.firebaseio.com/projects.json`,
                 method: 'POST',
                 data: JSON.stringify(projectData),
                 success: () => {
@@ -44,7 +44,7 @@ const app = Vue.createApp({
         // Firebase에서 프로젝트 불러오기
         loadPortfolio() {
             $.ajax({
-                url: `https://YOUR_PROJECT_ID.firebaseio.com/projects.json`,
+                url: `https://frontend-de63a.firebaseio.com/projects.json`,
                 method: 'GET',
                 success: (data) => {
                     this.projects = Object.keys(data || {}).map(id => ({ id, ...data[id] }));
@@ -58,7 +58,7 @@ const app = Vue.createApp({
         // Firebase에서 프로젝트 삭제
         deleteProject(id) {
             $.ajax({
-                url: `https://YOUR_PROJECT_ID.firebaseio.com/projects/${id}.json`,
+                url: `https://frontend-de63a.firebaseio.com/projects/${id}.json`,
                 method: 'DELETE',
                 success: () => {
                     this.loadPortfolio(); // 삭제 후 업데이트
