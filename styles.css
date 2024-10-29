@@ -58,6 +58,7 @@ h1.typing {
     margin-right: auto;
     margin-left: auto;
     color: black;
+	font-weight: bold;
 }
 
 .profile-section p {
@@ -85,6 +86,7 @@ h1.typing {
     margin-right: auto;
     margin-left: auto;
     color: white;
+	font-weight: bold;
 }
 
 .skill-section p {
@@ -117,16 +119,9 @@ h1.typing {
     margin-left: auto;
     color: black;
     text-align: center;
+	font-weight: bold;
 }
 
-.project_title h3{
-	font-size: 36px;
-    margin-bottom: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    color: black;
-    text-align: center;
-}
 
  /* 화면 너비가 600px 이상일 때 2열 */
     @media (min-width: 600px) {
@@ -171,6 +166,7 @@ h1.typing {
     margin-left: auto;
     color: black;
     text-align: center;
+	font-weight: bold;
 }
 
 .contact_title h3{
