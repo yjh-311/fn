@@ -74,7 +74,7 @@ h1.typing {
     /*background-color: #222;*/
     background-color: #F9C51D;
     text-align: center;
-    height: 720px;
+	padding-bottom:20px;
 }
 
 .skill-section h2 {
@@ -104,6 +104,12 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     display: flex; /* Flexbox 사용 */
     align-items: center; /* 세로 중앙 정렬 */
     height: 100%; /* 부모 요소에 맞춰서 높이 설정 */
+}
+
+.skill_card{
+	width: 80%;
+	margin: auto;
+	padding: 20px;
 }
 
 .skill_item .value {
