@@ -89,13 +89,6 @@ h1.typing {
 	font-weight: bold;
 }
 
-.skill-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    margin: 0 20px;
-    color: white;
-}
-
 .skill_item {
     display: flex; /* Flexbox 사용 */
     flex-wrap: wrap; /* 줄 바꿈 허용 */
