@@ -73,7 +73,7 @@ h1.typing {
 .skill-section {
     padding: 20px 20px;
     /*background-color: #222;*/
-    background-color: #333;
+    background-color: yellow;
     text-align: center;
     height: 720px;
 }
@@ -94,6 +94,30 @@ h1.typing {
     line-height: 1.6;
     margin: 0 20px;
     color: white;
+}
+
+.skill_item {
+    display: flex; /* Flexbox 사용 */
+    flex-wrap: wrap; /* 줄 바꿈 허용 */
+    padding: 10px 0; /* 각 항목의 수직 패딩 */
+    margin-bottom: 15px; /* 항목 간의 공백 조절 */
+}
+
+.skill_item span {
+    color: #333; /* 기본 글자 색 */
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 세로 중앙 정렬 */
+    height: 100%; /* 부모 요소에 맞춰서 높이 설정 */
+}
+
+.skill_item .value {
+    color: #007bff; /* 값의 색상 */
+    font-weight: bold; /* 굵게 설정 */
+
+    padding:3px;
+padding-right:8px;
+padding-left:8px;
+border-radius:8px;
 }
 
 /* 포트폴리오 섹션 */
