@@ -212,7 +212,7 @@ h1.typing {
 
 img{min-height: 100%; max-width: 100%; }
         .imgHoverEvent{ height: 250px; position: relative; overflow: hidden; display: inline-block;}
-        .imgHoverEvent .imgBox{ height: 250px; text-align: center; background:url(http://gahyun.wooga.kr/portfolio/triple/resources/img/city00.jpg) no-repeat 50% 50%; background-size: auto 100%;}
+        .imgHoverEvent .imgBox{ height: 250px; text-align: center; no-repeat 50% 50%; background-size: auto 100%;}
         .imgHoverEvent .hoverBox{width: 100%; position: absolute; top:0; left: 0; height: 250px;}
         .hoverBox h3.p1
         {
