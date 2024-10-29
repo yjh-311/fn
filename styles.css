@@ -78,14 +78,18 @@ h1.typing {
 }
 
 .skill-section h2 {
+
+font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-weight: 400;
+    font-style: normal;
+	
 	width: 180px;
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
     border-bottom: 3px solid white;
     margin-right: auto;
     margin-left: auto;
     color: white;
-	font-weight: bold;
 }
 
 .skill_item {
