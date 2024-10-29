@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.12.0/firebase-database.js"></script>
+
+</head>
+<body>
+	<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDDltuySu-IwUUkFBWqpAzIpaKmSwl0s0g",
+    authDomain: "frontend-de63a.firebaseapp.com",
+    projectId: "frontend-de63a",
+    storageBucket: "frontend-de63a.appspot.com",
+    messagingSenderId: "534702262257",
+    appId: "1:534702262257:web:2fe75a67924d4918dd6650",
+    measurementId: "G-JFQ9QWB8Q2"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+</script>
+
+	<div class="navbar w3-card">
+    <a href="#section1" onclick="scrollToSection(event, 'main')" class="w3-bar-item">Home</a>
+    <a href="#section2" onclick="scrollToSection(event, 'profile')" class="w3-bar-item">About</a>
+    <a href="#section3" onclick="scrollToSection(event, 'skill')" class="w3-bar-item">Skills</a>
+    <a href="#section4" onclick="scrollToSection(event, 'project')" class="w3-bar-item">Project</a>
+    <a href="#section5" onclick="scrollToSection(event, 'contact')" class="w3-bar-item">Contact</a>
+</div>
+	
+    <!-- 패럴럭스 배경 섹션 -->
+    <section class="main-section" id="main">
+        <h1 class="typing-txt">포트폴리오 관리 사이트 입니다.</h1>
+        <h1 class="typing"></h1>
+    </section>
+
+    <!-- 프로필 섹션 -->
+    <section class="profile-section" id="profile">
+        <h2>About Me</h2>
+        <p>소개</p>
+    </section>
+    
+    <!-- 스킬 섹션 -->
+    <section class="skill-section" id="skill">
+        <h2>Skills</h2>
+        <p>소개</p>
+    </section>
+
+<section id="project">
+	<div class="project_title">
+			<h2>Projects</h2>
+		</div>
+    <div id="app">
+        
+        <!-- 프로젝트 추가 폼 -->
+        <div v-show="lightOn">
+            <form id="projectForm" @submit.prevent="addProject" class="w3-container w3-card w3-padding-large">
+    			<div class="w3-row edit_title">
+				<h2 class="w3-text-teal">프로젝트 추가</h2>
+				<button v-on:click="lightOn = !lightOn" class="w3-button w3-hover-teal w3-teal w3-large w3-circle x_btn" onclick="scrollToSection(event, 'project')">X</button>
+			</div>
+
+    			<label for="name" class="w3-text-teal"><b>이름:</b></label>
+    			<input type="text" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<br>
+
+    			<label for="description" class="w3-text-teal"><b>설명:</b></label>
+    			<!--<input type="text" v-model="newProject.description" class="w3-input w3-border w3-round" required>-->
+    			<input type="text-area" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<br>
+
+    			<label for="link" class="w3-text-teal"><b>링크:</b></label>
+    			<input type="url" v-model="newProject.link" class="w3-input w3-border w3-round" required>
+    			<br>
+
+    			<label for="date_start" class="w3-text-teal"><b>부터:</b></label>
+    			<input type="date" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<br>
+    			
+    			<label for="date_end" class="w3-text-teal"><b>까지:</b></label>
+    			<input type="date" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required>
+
+    			<button type="submit" class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top">추가</button>
+			</form>
+        </div>
+		
+        <div class="portfolio" id="portfolio-container">
+            <!-- 프로젝트 목록 표시 -->
+            <!--<div v-for="project in projects" :key="project.id" class="project w3-border w3-hover-border-white  w3-border-black">
+                <h3>{{ project.name }}</h3>
+                <p>{{ project.description }}</p>
+                <img :src="project.link" alt="project image">
+                <p class="date">Completed on: {{ project.date }}</p>
+                <button v-if="lightOn" class="delete-btn" @click="deleteProject(project.id)">삭제</button>
+            </div>-->
+            
+            <div class="imgHoverEvent event1 project w3-border w3-hover-border-gray  w3-border-black"  v-for="project in projects" :key="project.id">
+            	<div class="imgBox">
+					<img :src="project.link" alt="" class="project-image">
+				</div>
+            	<div class="hoverBox">
+                	<h3 class="p1">{{ project.name }}</h3>
+                	<p class="p2">{{ project.description }}</p>
+                	<p class="p2 w3-display-bottomleft">개발 기간: {{ project.date_start }} ~ {{ project.date_end }} <button v-if="lightOn" class="delete-btn w3-right" @click="deleteProject(project.id)">삭제</button></p>
+            	</div>
+        	</div>
+		</div>
+<button v-on:click="lightOn = !lightOn" class="w3-button w3-hover-teal w3-teal w3-round-large w3-right" onclick="scrollToSection(event, 'project')">Edit</button>
+    </div>
+
+</section>
+<br>
+<hr>
+
+<section class="contact-section" id="contact">
+	<div class="contact_title">
+		<h2>Contact Me!</h2>
+		<br>
+		<h3>Email : kusatyd@naver.com</h3>
+	</div>
+</section>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/* 기본 스타일 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+/* 패럴럭스 배경 섹션 */
+.main-section {
+    height: 100vh;
+    background-image: url('https://weaklion.github.io/React-PortFolio/static/media/1.88d07c4d.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
+}
+
+.main-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+h1.typing-txt{
+  display: none;
+}
+
+h1.typing {  
+/*position: absolute;*/ 
+  display: inline-block; 
+  animation-name: cursor; 
+  animation-duration: 1s; 
+  animation-iteration-count: infinite; 
+ } 
+ @keyframes cursor{ 
+  0%{border-right: 1px solid #000} 
+  50%{border-right: 1px solid #fff} 
+  100%{border-right: 1px solid #000} 
+}
+
+/* 프로필 섹션 */
+.profile-section {
+    padding: 20px 20px;
+    /*background-color: #222;*/
+    background-color: white;
+    text-align: center;
+    height: 360px;
+}
+
+.profile-section h2 {
+	width: 180px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+}
+
+.profile-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 20px;
+    color: black;
+}
+
+/*스킬 섹션*/
+/* 프로필 섹션 */
+.skill-section {
+    padding: 20px 20px;
+    /*background-color: #222;*/
+    background-color: #333;
+    text-align: center;
+    height: 720px;
+}
+
+.skill-section h2 {
+	width: 180px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid white;
+    margin-right: auto;
+    margin-left: auto;
+    color: white;
+}
+
+.skill-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 20px;
+    color: white;
+}
+
+/* 포트폴리오 섹션 */
+#project{
+	padding: 20px 20px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* 한 줄에 최대 3개 카드 표시 */
+    gap: 20px;
+    padding: 20px 20px;
+    background-color: white;
+    color: #ffffff;
+}
+
+.project_title h2{
+	width: 180px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+    text-align: center;
+}
+
+.project_title h3{
+	font-size: 36px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+    text-align: center;
+}
+
+ /* 화면 너비가 600px 이상일 때 2열 */
+    @media (min-width: 600px) {
+        .portfolio {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    /* 화면 너비가 900px 이상일 때 3열 */
+    @media (min-width: 900px) {
+        .portfolio {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    /* 화면 너비가 1200px 이상일 때 4열 */
+    @media (min-width: 1300px) {
+        .portfolio {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 비율을 유지하면서 이미지가 영역을 꽉 채우도록 설정 */
+}
+
+/*contact*/
+.contact-section {
+    padding: 20px 20px;
+    /*background-color: #222;*/
+    text-align: center;
+}
+
+.contact_title h2{
+	width: 220px;
+    font-size: 36px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+    text-align: center;
+}
+
+.contact_title h3{
+	font-size: 36px;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+    text-align: center;
+}
+
+/*
+.project {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.project h3 {
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.project p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.project img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.date {
+    color: #888;
+    font-size: 0.9em;
+    margin-top: 10px;
+}*/
+
+img{min-height: 100%; max-width: 100%; }
+        .imgHoverEvent{ height: 250px; position: relative; overflow: hidden; display: inline-block;}
+        .imgHoverEvent .imgBox{ height: 250px; text-align: center; background:url(http://gahyun.wooga.kr/portfolio/triple/resources/img/city00.jpg) no-repeat 50% 50%; background-size: auto 100%;}
+        .imgHoverEvent .hoverBox{width: 100%; position: absolute; top:0; left: 0; height: 250px;}
+        .hoverBox h3.p1
+        {
+			text-align:center; 
+			/*font-size:18px; */
+			font-size: clamp(5px, 24px, 36px);
+			color: black;
+			text-shadow: 
+        	-1px -1px 0 white,  
+         	1px -1px 0 white,  
+        	-1px  1px 0 white,  
+         	1px  1px 0 white;
+		}
+        .hoverBox p.p2{padding-left: 12px; padding-right: 12px; margin-top: 50px; color: black; width: 100%;}
+        .event1 .hoverBox{background: linear-gradient(to bottom, rgba(0,0,0,0) 5%,rgba(255,255,255,1) 90%); transform: translateY(60%); transition: 0.5s;}
+        .event1:hover .hoverBox{transform: translateY(0);}
+    
+
+/*추가 폼*/
+#projectForm{
+	background-color: lightgray;
+	border-radius: 8px;
+	border: 1px solid black;
+}
+
+.edit_title{
+  display: flex;
+}
+
+.x_btn{
+	height: 40px;
+	width: 40px;
+	margin-top: auto;
+	margin-bottom: auto;
+	font-size: 28px;
+}
+       
+        
+/*네비바*/
+/* 고정 네비게이션 스타일 */
+    .navbar {
+        position: fixed;
+        top: 0;
+        /*width: 100%;*/
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border-left: 1px solid white;
+	border-right: 1px solid white;
+	border-bottom: 1px solid white;
+        background-color: rgba(51, 51, 51, 0.6);
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .navbar a {
+        color: darkgray;
+        text-decoration: none;
+        padding: 8px 16px;
+        font-size: 18px;
+    }
+
+    .navbar a:hover {
+        color: white;
+    }
+
+    /* 섹션 스타일 */
+    section {
+        padding: 80px 20px; /* 네비게이션 바 공간 확보를 위해 패딩 추가 */
+    }
+
+    #section1 { background-color: #f4a261; }
+    #section2 { background-color: #2a9d8f; }
+    #section3 { background-color: #e76f51; }
