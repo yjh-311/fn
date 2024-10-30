@@ -108,6 +108,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     display: flex; /* Flexbox 사용 */
     align-items: center; /* 세로 중앙 정렬 */
     height: 100%; /* 부모 요소에 맞춰서 높이 설정 */
+	padding:3px;
 }
 
 .skill_card{
@@ -120,7 +121,6 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     color: #007bff; /* 값의 색상 */
     font-weight: bold; /* 굵게 설정 */
 
-    padding:3px;
 	padding-right:8px;
 	padding-left:8px;
 	border-radius:8px;
