@@ -132,6 +132,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
 /* 포트폴리오 섹션 */
 #project{
 	padding: 20px 20px;
+	text-align: center;
 }
 
 .portfolio {
