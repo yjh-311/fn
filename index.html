@@ -105,8 +105,9 @@
     			<input type="text-area" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required>
     			<br>
 
-    			<label for="link" class="w3-text-teal"><b>링크:</b></label>
-    			<input type="url" v-model="newProject.link" class="w3-input w3-border w3-round" required>
+    			<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
+			<input type="file" @change="onFileChange" class="w3-input w3-border w3-round" required>
+
     			<br>
 
     			<label for="date_start" class="w3-text-teal"><b>부터:</b></label>
