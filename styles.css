@@ -51,14 +51,17 @@ h1.typing {
 }
 
 .profile-section h2 {
+	font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-weight: 400;
+    font-style: normal;
+	
 	width: 180px;
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     margin-right: auto;
     margin-left: auto;
     color: black;
-	font-weight: bold;
 }
 
 .profile-section p {
@@ -118,9 +121,12 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     font-weight: bold; /* 굵게 설정 */
 
     padding:3px;
-padding-right:8px;
-padding-left:8px;
-border-radius:8px;
+	padding-right:8px;
+	padding-left:8px;
+	border-radius:8px;
+	margin-right:12px;
+	font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-style: normal;
 }
 
 /* 포트폴리오 섹션 */
@@ -138,15 +144,17 @@ border-radius:8px;
 }
 
 .project_title h2{
+font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-weight: 400;
+    font-style: normal;
+	
 	width: 180px;
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     margin-right: auto;
     margin-left: auto;
     color: black;
-    text-align: center;
-	font-weight: bold;
 }
 
 
@@ -185,15 +193,17 @@ border-radius:8px;
 }
 
 .contact_title h2{
+font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-weight: 400;
+    font-style: normal;
+	
 	width: 220px;
-    font-size: 36px;
+    font-size: 48px;
     margin-bottom: 20px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     margin-right: auto;
     margin-left: auto;
     color: black;
-    text-align: center;
-	font-weight: bold;
 }
 
 .contact_title h3{
