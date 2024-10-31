@@ -34,6 +34,7 @@ h1.typing {
   animation-name: cursor; 
   animation-duration: 1s; 
   animation-iteration-count: infinite; 
+	font-size:65px;
  } 
  @keyframes cursor{ 
   0%{border-right: 1px solid #000} 
@@ -70,6 +71,9 @@ h1.typing {
 	color:black;
 	text-align:left;
 	height:300px;
+	width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
         }
         .profile-title {
             font-size: 2em; /* h1 사이즈 */
