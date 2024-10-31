@@ -129,3 +129,11 @@ function scrollToSection(event, sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
 }
+
+
+//이미지
+ document.getElementById('image').addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                alert("이미지가 선택되었습니다: " + this.files[0].name);
+            }
+        });
