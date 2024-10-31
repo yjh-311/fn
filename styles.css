@@ -302,6 +302,7 @@ img{min-height: 100%; max-width: 100%; }
 
 .upload-container {
             margin-top: 20px;
+	padding:0px;
         }
 
 .upload-container label{
