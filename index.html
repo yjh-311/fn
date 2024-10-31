@@ -114,25 +114,28 @@
 			</div>
 
     			<label for="name" class="w3-text-teal"><b>이름:</b></label>
-    			<input type="text" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<input type="text" id="name" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required>
     			<br>
 
     			<label for="description" class="w3-text-teal"><b>설명:</b></label>
     			<!--<input type="text" v-model="newProject.description" class="w3-input w3-border w3-round" required>-->
-    			<input type="text-area" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<input type="text-area" id="description" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required>
     			<br>
 
-    			<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
-			<input type="file" @change="onFileChange" class="w3-input w3-border w3-round" required>
-
+    			<!--<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
+			<input type="file" id="image" @change="onFileChange" class="w3-input w3-border w3-round" required>-->
+		    	<div class="upload-container w3-container">
+        			<label for="image" class="w3-button w3-teal w3-round">이미지 업로드</label>
+        			<input type="file" id="image" accept="image/*" style="display: none;">
+    			</div>
     			<br>
 
     			<label for="date_start" class="w3-text-teal"><b>부터:</b></label>
-    			<input type="date" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<input type="date" id="date_start" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required>
     			<br>
     			
     			<label for="date_end" class="w3-text-teal"><b>까지:</b></label>
-    			<input type="date" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required>
+    			<input type="date" id="date_end" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required>
 
     			<button type="submit" class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top">추가</button>
 			</form>
