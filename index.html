@@ -51,7 +51,12 @@
     <!-- 프로필 섹션 -->
     <section class="profile-section" id="profile">
         <h2>About Me</h2>
-        <p>소개</p>
+        <div class="profile-container">
+        <h1 class="profile-title">노력하는 사람</h1>
+        <div class="profile-description">
+            <p>어릴때 부터 무언가를 만들기 좋아하는 성격에 만들어 보았던 도서 관리 앱으로 무언가를 코드로 만드는 것에 재미를 느껴 그때부터 개발자를 목표로 하게 되었습니다.<br>앞으로도 배우기 위해 노력하는 사람이 되겠습니다.<br>잘부탁합니다.</p>
+        </div>
+    </div>
     </section>
     
     <!-- 스킬 섹션 -->
@@ -63,29 +68,29 @@
                 <span>언어:</span>
                 <span class="value w3-black w3-text-white">JavaScript</span>
 		    <span class="value w3-teal">Python</span>
-		    <span class="value w3-light-blue">Java</span>
+		    <span class="value w3-light-blue w3-text-white">Java</span>
 		    <span class="value w3-green">C</span>
 		    <span class="value w3-purple">C#</span>
-		    <span class="value w3-orange">C++</span>
+		    <span class="value w3-orange w3-text-white">C++</span>
             </div>
             <div class="s6 skill_item">
                 <span>프론트엔드:</span>
                 <span class="value w3-red">Vue.js</span>
 		<span class="value w3-purple">React</span>
 		<span class="value w3-teal">HTML</span>
-		<span class="value w3-light-green">CSS</span>
-		<span class="value w3-orange">sass</span>
+		<span class="value w3-light-green w3-text-white">CSS</span>
+		<span class="value w3-orange w3-text-white">sass</span>
             </div>
             <div class="s6 skill_item">
                 <span>백엔드:</span>
-                <span class="value w3-gray">Flask</span>
-		<span class="value w3-orange">tomcat</span>
+                <span class="value w3-gray w3-text-white">Flask</span>
+		<span class="value w3-orange w3-text-white">tomcat</span>
 		<span class="value w3-pink">firebase</span>
             </div>
             <div class="s6 skill_item">
                 <span>Database:</span>
                 <span class="value w3-black w3-text-white">MariaDB</span>
-		<span class="value w3-light-blue">SQLite</span>
+		<span class="value w3-light-blue w3-text-white">SQLite</span>
 		<span class="value w3-teal">AWS</span>
 		<span class="value w3-pink">Oracle</span>
             </div>
@@ -105,7 +110,7 @@
             <form id="projectForm" @submit.prevent="addProject" class="w3-container w3-card w3-padding-large">
     			<div class="w3-row edit_title">
 				<h2 class="w3-text-teal">프로젝트 추가</h2>
-				<button v-on:click="lightOn = !lightOn" class="w3-button w3-hover-teal w3-teal w3-large w3-circle x_btn" onclick="scrollToSection(event, 'project')">X</button>
+				<button v-on:click="lightOn = !lightOn" class="w3-button w3-hover-teal w3-teal w3-circle x_btn" onclick="scrollToSection(event, 'project')">X</button>
 			</div>
 
     			<label for="name" class="w3-text-teal"><b>이름:</b></label>
