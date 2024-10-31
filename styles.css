@@ -124,6 +124,13 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     height: 100%; /* 부모 요소에 맞춰서 높이 설정 */
 	padding:3px;
 	margin-top: 8px;
+	font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-style: normal;
+}
+
+.skill_item image {
+    height:28.5px;
+	margin:8px;
 }
 
 .skill_card{
