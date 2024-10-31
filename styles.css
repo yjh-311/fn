@@ -128,7 +128,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     font-style: normal;
 }
 
-.skill_item image {
+.skill_item_image {
     height:28.5px;
 	margin:8px;
 }
