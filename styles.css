@@ -160,6 +160,8 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     display: flex;
     align-items: center;
     justify-content: center;
+	padding: 20px 20px;
+	padding: 20px 20px;
 }
 
 .archive-content {
@@ -177,14 +179,6 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.archiv-section{
-padding: 20px 20px;
-    /*background-color: #222;*/
-    background-color: #F9C51D;
-    text-align: center;
-	padding-bottom:50px;
-	height:500px;
-}
 
 .archiv-section h2 {
     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
