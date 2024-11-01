@@ -170,7 +170,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
 }
 
 .github-container {
-    background-color: white;
+    background-color: black;
     height: 300px;
     border-radius: 20px;
     display: flex;
