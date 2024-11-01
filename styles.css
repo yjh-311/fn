@@ -78,6 +78,7 @@ h1.typing {
         .profile-title {
             font-size: 2em; /* h1 사이즈 */
             margin-right: 20px;
+		width: 180px;
         }
         .profile-description {
             font-size: 16px;
@@ -211,7 +212,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
 /*contact*/
 .contact-section {
     padding: 20px 20px;
-    /*background-color: #222;*/
+    background-color: #222;
     text-align: center;
 }
 
@@ -223,10 +224,10 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
 	width: 310px;
     font-size: 48px;
     margin-bottom: 20px;
-    border-bottom: 3px solid black;
+    border-bottom: 3px solid white;
     margin-right: auto;
     margin-left: auto;
-    color: black;
+    color: white;
 }
 
 .contact_title h3{
@@ -234,7 +235,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     margin-bottom: 20px;
     margin-right: auto;
     margin-left: auto;
-    color: black;
+    color: white;
     text-align: center;
 }
 
