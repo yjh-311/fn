@@ -177,6 +177,20 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.archiv-section{
+font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+    font-weight: 400;
+    font-style: normal;
+	
+	width: 180px;
+    font-size: 48px;
+    margin-bottom: 20px;
+    border-bottom: 3px solid black;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+}
+
 /* GitHub 아이콘 스타일 */
 .github-icon {
     height: 50px;
