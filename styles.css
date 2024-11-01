@@ -152,6 +152,56 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     font-style: normal;
 }
 
+
+/*아카이브*/
+/* 배경 색, 높이 설정 */
+.archiv-section {
+    background-color: sand;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.archive-content {
+    width: 80%; /* 섹션 내부 너비 조정 */
+    max-width: 800px;
+}
+
+.github-container {
+    background-color: white;
+    height: 300px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* GitHub 아이콘 스타일 */
+.github-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+/* GitHub 링크 스타일 */
+.github-link {
+    font-size: 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
 /* 포트폴리오 섹션 */
 #project{
 	padding: 20px 20px;
