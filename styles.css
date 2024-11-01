@@ -156,7 +156,6 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
 /*아카이브*/
 /* 배경 색, 높이 설정 */
 .archiv-section {
-    background-color: sand;
     height: 500px;
     display: flex;
     align-items: center;
@@ -180,7 +179,6 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
 
 /* GitHub 아이콘 스타일 */
 .github-icon {
-    width: 50px;
     height: 50px;
     margin-right: 20px;
 }
