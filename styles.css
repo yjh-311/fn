@@ -177,6 +177,7 @@ font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
     align-items: center;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	width: max-content;
 }
 
 
