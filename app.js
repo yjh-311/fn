@@ -2,6 +2,8 @@ const myapp = Vue.createApp({
 	data() {
 		return {
 			lightOn: false,
+			modalOn: false,
+			editmodalOn: false,
 			projects: [],
 			selectedProject: null,
 			newProject: {
@@ -10,11 +12,12 @@ const myapp = Vue.createApp({
 				imageFile: null, // 이미지 파일 저장용
 				date_start: '',
 				date_end: '',
-				projectURL: '',
+				projectUrl: '',
 				tc: '',
 				project_background: '',
 				Meaning: '',
-				sub_title: ''
+				sub_title: '',
+				id: ''
 
 			},
 			message: '',
@@ -23,23 +26,107 @@ const myapp = Vue.createApp({
 	mounted() {
 		this.loadPortfolio();
 	},
-	methods: {formatDescription(description) {
+	methods: {
+		formatDescription(description) {
 			if (!description) {
 				return [];
 			}
 			// ". "와 "\n"을 기준으로 분리
 			return description.split(/\n/).filter(item => item.trim() !== '');
 		},
-		// 파일 선택 시 실행되는 메서드
-		onFileChange(event) {
-			this.newProject.imageFile = event.target.files[0];
+		formatText(text1) {
+			var text = String(text1);
+			return text.includes('\n') ?
+				text.replace(/\n/g, '<br>') :
+				text; // 쉼표가 없으면 그대로 반환
 		},
+
+		//////////////////////////////////////
+
 		openModal(project) {
-			this.selectedProject = project; // 선택한 프로젝트 설정
+			this.selectedProject = project; // 선택된 프로젝트 설정
+			this.modalOn = true; // 상세보기 모달 열기
 		},
 		closeModal() {
-			this.selectedProject = null; // 선택한 프로젝트 초기화
+			this.modalOn = false; // 상세보기 모달 닫기
+			this.editmodalOn = false; // 수정 모달 닫기
 		},
+		openEditModal(project) {
+			this.newProject = project; // 선택된 프로젝트 설정
+			this.editmodalOn = true; // 상세보기 모달 열기
+		},
+		// 이미지 파일 선택 처리
+		onFileChange(event) {
+			const file = event.target.files[0];
+			if (file) {
+				this.newProject.imageFile = file;
+			}
+		},
+
+		// 프로젝트 업데이트 함수
+		updateProject() {
+			const index = this.projects.findIndex(p => p.id === this.newProject.id);
+			if (index !== -1) {
+				// Firebase Storage에 이미지 업로드가 필요한 경우
+				if (this.newProject.imageFile) {
+					const storageRef = firebase.storage().ref(`projects/${this.newProject.id}`);
+					const uploadTask = storageRef.put(this.newProject.imageFile);
+
+					uploadTask.on(
+						'state_changed',
+						(snapshot) => {
+							// 파일 업로드 진행률을 보고할 수 있음
+						},
+						(error) => {
+							console.error("이미지 업로드 중 오류 발생:", error);
+						},
+						() => {
+							// 업로드가 완료되면 이미지 URL을 얻음
+							uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
+								this.newProject.imageUrl = downloadURL; // 다운로드 URL을 newProject에 추가
+
+								// Firebase Realtime Database에 업데이트
+								this.submitProjectUpdate(index);
+							});
+						}
+					);
+				} else {
+					// 이미지 업로드가 필요하지 않은 경우 바로 업데이트
+					this.submitProjectUpdate(index);
+				}
+			}
+		},
+
+		// Firebase Realtime Database에 업데이트 요청
+		submitProjectUpdate(index) {
+			$.ajax({
+				url: `https://frontend-de63a-default-rtdb.firebaseio.com/projects/${this.newProject.id}.json`,
+				method: 'PUT',
+				contentType: 'application/json',
+				data: JSON.stringify(this.newProject),
+				success: () => {
+					alert("프로젝트가 성공적으로 업데이트되었습니다!");
+
+					// 프로젝트 배열 업데이트 및 새로고침
+					this.projects.splice(index, 1, {
+						...this.newProject
+					});
+					this.editmodalOn = false; // 수정 모달 닫기
+					this.loadPortfolio(); // 페이지 새로고침
+				},
+				error: (error) => {
+					console.error("업데이트 중 오류 발생:", error);
+				}
+			});
+		},
+
+
+
+
+
+
+		/////////////////////////////////
+
 
 		openLink(url) {
 			window.open(url, '_blank');
@@ -89,16 +176,18 @@ const myapp = Vue.createApp({
 				url: `https://frontend-de63a-default-rtdb.firebaseio.com/projects.json`,
 				method: 'POST',
 				data: JSON.stringify(projectData),
-				success: () => {
+				success: (response) => {
 					alert("프로젝트가 성공적으로 추가되었습니다!");
 					this.message = "프로젝트가 성공적으로 추가되었습니다!";
 					this.loadPortfolio();
+					const generatedId = response.name; // Firebase에서 생성된 고유 ID
+					projectData.id = generatedId; // 새 프로젝트에 ID를 할당
 
 					// newProject 속성 초기화
 					this.newProject = {
 						name: '',
 						description: '',
-						imageFile: null,
+						imageUrl: null,
 						date_start: '',
 						date_end: '',
 						projectURL: '',
@@ -122,17 +211,23 @@ const myapp = Vue.createApp({
 				url: `https://frontend-de63a-default-rtdb.firebaseio.com/projects.json`,
 				method: 'GET',
 				success: (data) => {
-					this.projects = Object.keys(data || {}).map(id => ({ id, ...data[id] }));
+					this.projects = Object.keys(data || {}).map(id => ({
+						id,
+						...data[id]
+					}));
 				},
 				error: (error) => console.error("불러오기 중 오류 발생:", error),
 			});
 		},
 		transformedTechnologies(technologies) {
-      if (technologies) { // technologies가 유효한지 확인
-        return technologies.replace(/,/g, ' #');
-      }
-      return ''; // technologies가 undefined인 경우 빈 문자열 반환
-    },
+			if (technologies) { // technologies가 유효한지 확인
+				var technologie = String(technologies);
+				return technologie.includes(',') ?
+					technologie.replace(/,/g, ' #') :
+					technologie; // 쉼표가 없으면 그대로 반환
+			}
+			return ''; // technologies가 undefined인 경우 빈 문자열 반환
+		},
 
 		// 프로젝트 삭제 (이미지 파일도 함께 삭제)
 		deleteProject(id) {
@@ -205,7 +300,9 @@ function typing() {
 function scrollToSection(event, sectionId) {
 	event.preventDefault();
 	const section = document.getElementById(sectionId);
-	section.scrollIntoView({ behavior: "smooth" });
+	section.scrollIntoView({
+		behavior: "smooth"
+	});
 }
 
 
