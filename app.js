@@ -129,7 +129,7 @@ const myapp = Vue.createApp({
 		},
 		transformedTechnologies(technologies) {
       if (technologies) { // technologies가 유효한지 확인
-        return technologies.replace(/\s+/g, '').replace(/,/g, ' #');
+        return technologies.replace(/,/g, ' #');
       }
       return ''; // technologies가 undefined인 경우 빈 문자열 반환
     },
