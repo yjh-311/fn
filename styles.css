@@ -1,537 +1,545 @@
 /* 기본 스타일 */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #ffffff;
-} 
-
+ body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     color: #ffffff;
+}
 /* 패럴럭스 배경 섹션 */
-.main-section {
-    height: 100vh;
-    background-image: url('https://weaklion.github.io/React-PortFolio/static/media/1.88d07c4d.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    text-align: center;
+ .main-section {
+     height: 100vh;
+     background-image: url('https://weaklion.github.io/React-PortFolio/static/media/1.88d07c4d.jpg');
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     display: flex;
+     justify-content: left;
+     align-items: center;
+     text-align: center;
 }
-
-.main-section h1 {
-    font-size: 48px;
-    font-weight: bold;
-    color: #ffffff;
+ .main-section h1 {
+     font-size: 48px;
+     font-weight: bold;
+     color: #ffffff;
 }
-
-h1.typing-txt{
-  display: none;
+ h1.typing-txt{
+     display: none;
 }
-
-h1.typing {  
-/*position: absolute;*/ 
-  display: inline-block; 
-  animation-name: cursor; 
-  animation-duration: 1s; 
-  animation-iteration-count: infinite; 
-	font-size:65px;
- } 
- @keyframes cursor{ 
-  0%{border-right: 1px solid #000} 
-  50%{border-right: 1px solid #fff} 
-  100%{border-right: 1px solid #000} 
+ h1.typing {
+    /*position: absolute;
+    */
+     display: inline-block;
+     animation-name: cursor;
+     animation-duration: 1s;
+     animation-iteration-count: infinite;
+     font-size:65px;
 }
-
+ @keyframes cursor{
+     0%{
+        border-right: 1px solid #000
+    }
+     50%{
+        border-right: 1px solid #fff
+    }
+     100%{
+        border-right: 1px solid #000
+    }
+}
 /* 프로필 섹션 */
-.profile-section {
-    padding: 20px 20px;
-    /*background-color: #222;*/
-    background-color: white;
-    text-align: center;
+ .profile-section {
+     padding: 20px 20px;
+    /*background-color: #222;
+    */
+     background-color: white;
+     text-align: center;
 }
-
-.profile-section h2 {
-	font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-weight: 400;
-    font-style: normal;
-	
-	width: 250px;
-    font-size: 48px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid black;
-    margin-right: auto;
-    margin-left: auto;
-    color: black;
+ .profile-section h2 {
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-weight: 400;
+     font-style: normal;
+     width: 250px;
+     font-size: 48px;
+     margin-bottom: 20px;
+     border-bottom: 3px solid black;
+     margin-right: auto;
+     margin-left: auto;
+     color: black;
 }
-
-
-.profile-container {
-            display: flex;
-            align-items: center;
-	color:black;
-	text-align:left;
-	height:300px;
-	width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-        }
-        .profile-title {
-            font-size: 2em; /* h1 사이즈 */
-            margin-right: 20px;
-		width: 180px;
-        }
-        .profile-description {
-            font-size: 16px;
-        }
-
+ .profile-container {
+     display: flex;
+     align-items: center;
+     color:black;
+     text-align:left;
+     height:300px;
+     width: fit-content;
+     margin-left: auto;
+     margin-right: auto;
+}
+ .profile-title {
+     font-size: 2em;
+    /* h1 사이즈 */
+     margin-right: 20px;
+     width: 180px;
+}
+ .profile-description {
+     font-size: 16px;
+}
 /*스킬 섹션*/
-.skill-section {
-    padding: 20px 20px;
-    /*background-color: #222;*/
-    background-color: #F9C51D;
-    text-align: center;
-	padding-bottom:50px;
-	height:500px;
+ .skill-section {
+     padding: 20px 20px;
+    /*background-color: #222;
+    */
+     background-color: #F9C51D;
+     text-align: center;
+     padding-bottom:50px;
+     height:500px;
 }
-
-.skill-section h2 {
-
-font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-weight: 400;
-    font-style: normal;
-	
-	width: 180px;
-    font-size: 48px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid black;
-    margin-right: auto;
-    margin-left: auto;
-    color: black;
+ .skill-section h2 {
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-weight: 400;
+     font-style: normal;
+     width: 180px;
+     font-size: 48px;
+     margin-bottom: 20px;
+     border-bottom: 3px solid black;
+     margin-right: auto;
+     margin-left: auto;
+     color: black;
 }
-
-.skill_item {
-    display: flex; /* Flexbox 사용 */
-    flex-wrap: wrap; /* 줄 바꿈 허용 */
-    padding: 10px 0; /* 각 항목의 수직 패딩 */
-    margin-top: 7.5px; /* 항목 간의 공백 조절 */
-    margin-bottom: 7.5px; /* 항목 간의 공백 조절 */
-	margin-top: 8px;
+ .skill_item {
+     display: flex;
+    /* Flexbox 사용 */
+     flex-wrap: wrap;
+    /* 줄 바꿈 허용 */
+     padding: 10px 0;
+    /* 각 항목의 수직 패딩 */
+     margin-top: 7.5px;
+    /* 항목 간의 공백 조절 */
+     margin-bottom: 7.5px;
+    /* 항목 간의 공백 조절 */
+     margin-top: 8px;
 }
-
-.skill_item span {
-    color: #333; /* 기본 글자 색 */
-    display: flex; /* Flexbox 사용 */
-    align-items: center; /* 세로 중앙 정렬 */
-    height: 100%; /* 부모 요소에 맞춰서 높이 설정 */
-	padding:3px;
-	margin-top: 8px;
-	font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-style: normal;
+ .skill_item span {
+     color: #333;
+    /* 기본 글자 색 */
+     display: flex;
+    /* Flexbox 사용 */
+     align-items: center;
+    /* 세로 중앙 정렬 */
+     height: 100%;
+    /* 부모 요소에 맞춰서 높이 설정 */
+     padding:3px;
+     margin-top: 8px;
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-style: normal;
 }
-
-.skill_item_image {
-    height:28.5px;
-	margin:8px;
+ .skill_item_image {
+     height:28.5px;
+     margin:8px;
 }
-
-.skill_card{
-	width: 80%;
-	margin: auto;
-	padding: 20px;
+ .skill_card{
+     width: 80%;
+     margin: auto;
+     padding: 20px;
 }
-
-.skill_item .value {
-    color: #007bff; /* 값의 색상 */
-    font-weight: bold; /* 굵게 설정 */
-
-	padding-right:8px;
-	padding-left:8px;
-	border-radius:8px;
-	margin-right:12px;
-	font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-style: normal;
+ .skill_item .value {
+     color: #007bff;
+    /* 값의 색상 */
+     font-weight: bold;
+    /* 굵게 설정 */
+     padding-right:8px;
+     padding-left:8px;
+     border-radius:8px;
+     margin-right:12px;
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-style: normal;
 }
-
-
 /*아카이브*/
 /* 배경 색, 높이 설정 */
-.Archive-section {
-    height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-	padding: 20px 20px;
-	padding: 20px 20px;
+ .Archive-section {
+     height: 500px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding: 20px 20px;
+     padding: 20px 20px;
 }
-
-.archive-content {
-    width: 80%; /* 섹션 내부 너비 조정 */
-    max-width: 800px;
+ .archive-content {
+     width: 80%;
+    /* 섹션 내부 너비 조정 */
+     max-width: 800px;
 }
-
-.github-container {
-    background-color: black;
-    height: 300px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-	width: max-content;
-	color:white;
+ .github-container {
+     background-color: black;
+     height: 300px;
+     border-radius: 20px;
+     display: flex;
+     align-items: center;
+     padding: 20px;
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+     width: max-content;
+     color:white;
 }
-
-
-.Archive-section h2 {
-    font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-weight: 400;
-    font-style: normal;
-	
-	width: 220px;
-    font-size: 48px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid black;
-    margin-right: auto;
-    margin-left: auto;
-    color: black;
-	text-align:center;
+ .Archive-section h2 {
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-weight: 400;
+     font-style: normal;
+     width: 220px;
+     font-size: 48px;
+     margin-bottom: 20px;
+     border-bottom: 3px solid black;
+     margin-right: auto;
+     margin-left: auto;
+     color: black;
+     text-align:center;
 }
-
 /* GitHub 아이콘 스타일 */
-.github-icon {
-    height: 50px;
-    margin-right: 20px;
+ .github-icon {
+     height: 50px;
+     margin-right: 20px;
 }
-
 /* GitHub 링크 스타일 */
-.github-link {
-    font-size: 20px;
-    color: #333;
-    text-decoration: none;
+ .github-link {
+     font-size: 20px;
+     color: #333;
+     text-decoration: none;
 }
-
-.github-link:hover {
-    text-decoration: underline;
+ .github-link:hover {
+     text-decoration: underline;
 }
-
-
-
-
-
-
-
 /* 포트폴리오 섹션 */
-#project{
-	padding: 20px 20px;
-	
+ #project{
+     padding: 20px 20px;
 }
-
-.portfolio {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); /* 한 줄에 최대 3개 카드 표시 */
-    gap: 20px;
-    padding: 20px 20px;
-    background-color: white;
-    color: #ffffff;
+ .portfolio {
+     display: grid;
+     grid-template-columns: repeat(1, 1fr);
+    /* 한 줄에 최대 3개 카드 표시 */
+     gap: 20px;
+     padding: 20px 20px;
+     background-color: white;
+     color: #ffffff;
 }
-
-.project_title h2{
-font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-weight: 400;
-    font-style: normal;
-	text-align: center;
-	width: 240px;
-    font-size: 48px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid black;
-    margin-right: auto;
-    margin-left: auto;
-    color: black;
+ .project_title h2{
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-weight: 400;
+     font-style: normal;
+     text-align: center;
+     width: 240px;
+     font-size: 48px;
+     margin-bottom: 20px;
+     border-bottom: 3px solid black;
+     margin-right: auto;
+     margin-left: auto;
+     color: black;
 }
-
-
- /* 화면 너비가 600px 이상일 때 2열 */
-    @media (min-width: 600px) {
-        .portfolio {
-            grid-template-columns: repeat(2, 1fr);
-        }
+ .scrollable-list {
+     max-height: 35%;
+    /* 원하는 최대 높이 설정 */
+     overflow-y: auto;
+    /* 세로 스크롤 활성화 */
+     overflow-x: hidden;
+    /* 가로 스크롤 숨김 */
+     -ms-overflow-style: none;
+}
+/* 화면 너비가 600px 이상일 때 2열 */
+ @media (min-width: 600px) {
+     .portfolio {
+         grid-template-columns: repeat(2, 1fr);
     }
-
-    /* 화면 너비가 900px 이상일 때 3열 */
-    @media (min-width: 900px) {
-        .portfolio {
-            grid-template-columns: repeat(3, 1fr);
-        }
+     .scrollable-list {
+         max-height: 35%;
     }
-
-
-.project-image {
-    width: 100%;
-    height: 500px;
-    object-fit: cover; /* 비율을 유지하면서 이미지가 영역을 꽉 채우도록 설정 */
 }
-
+/* 화면 너비가 900px 이상일 때 3열 */
+ @media (min-width: 1200px) {
+     .portfolio {
+         grid-template-columns: repeat(3, 1fr);
+    }
+     .scrollable-list {
+         max-height: 40%;
+    }
+}
+ .project-image {
+     width: 100%;
+     height: 550px;
+     object-fit: fill;
+    /* 비율을 유지하면서 이미지가 영역을 꽉 채우도록 설정 */
+}
 /*contact*/
-.contact-section {
-    padding: 20px 20px;
-    background-color: #222;
-    text-align: center;
+ .contact-section {
+     padding: 20px 20px;
+     background-color: #222;
+     text-align: center;
 }
-
-.contact_title h2{
-font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
-    font-weight: 400;
-    font-style: normal;
-	
-	width: 310px;
-    font-size: 48px;
-    margin-bottom: 20px;
-    border-bottom: 3px solid white;
-    margin-right: auto;
-    margin-left: auto;
-    color: white;
+ .contact_title h2{
+     font-family: __Black_Han_Sans_27e777, __Black_Han_Sans_Fallback_27e777;
+     font-weight: 400;
+     font-style: normal;
+     width: 310px;
+     font-size: 48px;
+     margin-bottom: 20px;
+     border-bottom: 3px solid white;
+     margin-right: auto;
+     margin-left: auto;
+     color: white;
 }
-
-.contact_title h3{
-	font-size: 36px;
-    margin-bottom: 20px;
-    margin-right: auto;
-    margin-left: auto;
-    color: white;
-    text-align: center;
+ .contact_title h3{
+     font-size: 36px;
+     margin-bottom: 20px;
+     margin-right: auto;
+     margin-left: auto;
+     color: white;
+     text-align: center;
 }
-
-/*
-.project {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    text-align: center;
+/* .project {
+     background-color: #333;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     text-align: center;
 }
-
-.project h3 {
-    font-size: 24px;
-    margin: 0 0 10px;
+ .project h3 {
+     font-size: 24px;
+     margin: 0 0 10px;
 }
-
-.project p {
-    font-size: 16px;
-    margin: 10px 0;
+ .project p {
+     font-size: 16px;
+     margin: 10px 0;
 }
-
-.project img {
+ .project img {
+     width: 100%;
+     max-width: 100px;
+     height: auto;
+     margin-top: 10px;
+}
+ .date {
+     color: #888;
+     font-size: 0.9em;
+     margin-top: 10px;
+}
+*/
+ img{
+    min-height: 100%;
+     max-width: 100%;
+}
+ .imgHoverEvent{
+     height: 550px;
+     position: relative;
+     overflow: hidden;
+     display: inline-block;
+}
+ .imgHoverEvent .imgBox{
+     height: 550px;
+     text-align: center;
+     no-repeat 50% 50%;
+     background-size: auto 100%;
+}
+ .imgHoverEvent .hoverBox{
     width: 100%;
-    max-width: 100px;
-    height: auto;
-    margin-top: 10px;
+     position: absolute;
+     top:0;
+     left: 0;
+     height: 550px;
 }
-
-.date {
-    color: #888;
-    font-size: 0.9em;
-    margin-top: 10px;
-}*/
-
-img{min-height: 100%; max-width: 100%; }
-        .imgHoverEvent{ height: 500px; position: relative; overflow: hidden; display: inline-block;}
-        .imgHoverEvent .imgBox{ height: 500px; text-align: center; no-repeat 50% 50%; background-size: auto 100%;}
-        .imgHoverEvent .hoverBox{width: 100%; position: absolute; top:0; left: 0; height: 500px;}
-        .hoverBox h3.p1
-        {
-			text-align:center; 
-			/*font-size:18px; */
-			font-size: clamp(5px, 24px, 36px);
-			color: black;
-			text-shadow: 
-        	-1px -1px 0 white,  
-         	1px -1px 0 white,  
-        	-1px  1px 0 white,  
-         	1px  1px 0 white;
-		}
-        .hoverBox h2.p2{margin-left: 6px; margin-right: 6px;padding-left: 6px; 
-			padding-right: 12px; color: black; width: 100%;}
-			
-			.hoverBox h3.p2{margin-left: 6px; margin-right: 6px;padding-left: 6px; 
-			padding-right: 12px; color: black; width: 100%;}
-			
-        .hoverBox .p3{
-			margin-left: 6px; 
-			margin-right: 6px;
-			padding-left: 6px; 
-			padding-right: 12px; 
-			color: black; 
-			width: 100%;
-			white-space: pre-wrap; /* 공백과 줄 바꿈을 유지합니다. */
-    		word-wrap: break-word; /* 긴 단어가 줄을 넘을 수 있도록 합니다. */
-			}
-			
-			
-        .event1 .hoverBox{background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 15%);
-			  transform: translateY(85%); transition: 0.5s;}
-        .event1:hover .hoverBox{transform: translateY(0);}
-    
-.project-info {
-    display: flex;
-    align-items: center; /* 세로 중앙 정렬 */
-    gap: 10px; /* 텍스트와 버튼 간 간격 조절 */
+ .hoverBox h3.p1 {
+     text-align:center;
+    /*font-size:18px;
+     */
+     font-size: clamp(5px, 24px, 36px);
+     color: black;
+     text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
 }
-
-
-.hoverBox p.url{ 
-			color: blue;
-			border-left: 4px solid blue;
-			display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 3;   /* 표시할 줄 수 설정 */
-    overflow: hidden;
-    max-width: 100%;
-			}
-			
-.hoverBox .tc{ 
-			width: 95%;
-			margin-left: auto;
-			margin-right: auto;
-			border-radius: 12px;
-			background-color: rgba(249, 197, 29, .2);
-			}
-			
-
-
+ .hoverBox h2.p2{
+    margin-left: 6px;
+     margin-right: 6px;
+    padding-left: 6px;
+     padding-right: 12px;
+     color: black;
+     width: 100%;
+}
+ .hoverBox h3.p2{
+    margin-left: 6px;
+     margin-right: 6px;
+    padding-left: 6px;
+     padding-right: 12px;
+     color: black;
+     width: 100%;
+}
+ .hoverBox .p3{
+     margin-left: 6px;
+     margin-right: 6px;
+     padding-left: 6px;
+     padding-right: 12px;
+     color: black;
+     width: 100%;
+     white-space: pre-wrap;
+    /* 공백과 줄 바꿈을 유지합니다. */
+     word-wrap: break-word;
+    /* 긴 단어가 줄을 넘을 수 있도록 합니다. */
+}
+ .event1 .hoverBox{
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(255,255,255,1) 15%);
+     transform: translateY(85%);
+     transition: 0.5s;
+}
+ .event1:hover .hoverBox{
+    transform: translateY(0);
+}
+ .project-info {
+     display: flex;
+     align-items: center;
+    /* 세로 중앙 정렬 */
+     gap: 10px;
+    /* 텍스트와 버튼 간 간격 조절 */
+}
+ .scrollable-list::-webkit-scrollbar{
+     display:none;
+}
+ .hoverBox p.url{
+     color: blue;
+     border-left: 4px solid blue;
+     display: -webkit-box;
+     -webkit-box-orient: vertical;
+     -webkit-line-clamp: 3;
+    /* 표시할 줄 수 설정 */
+     overflow: hidden;
+     max-width: 100%;
+}
+ .hoverBox .tc{
+     width: 95%;
+     margin-left: auto;
+     margin-right: auto;
+     border-radius: 12px;
+     background-color: rgba(249, 197, 29, .2);
+}
 /*추가 폼*/
-#projectForm{
-	background-color: lightgray;
-	border-radius: 8px;
-	border: 1px solid black;
+ #projectForm{
+     background-color: lightgray;
+     border-radius: 8px;
+     border: 1px solid black;
 }
-
-#projectForm input{
-	background-color: white;
-	color:black;
+ #projectForm input{
+     background-color: white;
+     color:black;
 }
-
-#projectForm button{
-	text-align:center;
+ #projectForm button{
+     text-align:center;
 }
-
-.edit_title{
-  display: flex;
+ .edit_title{
+     display: flex;
 }
-
-.upload-container {
-            margin-top: 20px;
-	padding:0px;
-        }
-
-.upload-container label{
-	width: 100%;
+ .upload-container {
+     margin-top: 20px;
+     padding:0px;
 }
-
-.x_btn{
-	height: 40px;
-	width: 40px;
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-left: auto;
-	font-size: 12px;
+ .upload-container label{
+     width: 100%;
 }
-       
-        
+ .x_btn{
+     height: 40px;
+     width: 40px;
+     margin-top: auto;
+     margin-bottom: auto;
+     margin-left: auto;
+     font-size: 12px;
+}
 /*네비바*/
 /* 고정 네비게이션 스타일 */
-    .navbar {
-        position: fixed;
-        top: 0;
-        /*width: 100%;*/
-        border-bottom-left-radius: 8px;
-        border-bottom-right-radius: 8px;
-        border-left: 1px solid white;
-	border-right: 1px solid white;
-	border-bottom: 1px solid white;
-        background-color: rgba(51, 51, 51, 0.6);
-        color: #fff;
-        display: flex;
-        justify-content: space-around;
-        padding: 10px;
-        right: 20px;
-        z-index: 1000;
-    }
-
-    .navbar a {
-        color: darkgray;
-        text-decoration: none;
-        padding: 8px 16px;
-        font-size: 18px;
-    }
-
-    .navbar a:hover {
-        color: white;
-    }
-
-    /* 섹션 스타일 */
-    section {
-        padding: 80px 20px; /* 네비게이션 바 공간 확보를 위해 패딩 추가 */
-    }
-
-    #section1 { background-color: #f4a261; }
-    #section2 { background-color: #2a9d8f; }
-    #section3 { background-color: #e76f51; }
-    
-    
-    
-    
-    
-    
-    
-/*********************************************************/
-.modal {
-    display: flex;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.7); /* 배경 투명도 조절 */
+ .navbar {
+     position: fixed;
+     top: 0;
+    /*width: 100%;
+    */
+     border-bottom-left-radius: 8px;
+     border-bottom-right-radius: 8px;
+     border-left: 1px solid white;
+     border-right: 1px solid white;
+     border-bottom: 1px solid white;
+     background-color: rgba(51, 51, 51, 0.6);
+     color: #fff;
+     display: flex;
+     justify-content: space-around;
+     padding: 10px;
+     right: 20px;
+     z-index: 1000;
 }
-
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto; /* 모달을 화면 중앙에 위치시킴 */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* 너비 조정 */
-    max-height: 80%; /* 최대 높이 설정 */
-    overflow: hidden; /* 스크롤을 없애고 내용이 넘치면 보이지 않게 함 */
-    word-wrap: break-word; /* 단어가 넘어가면 줄 바꿈 */
-    white-space: normal; /* 기본 줄 바꿈 허용 */
-    color: black;
-    overflow-y: auto; /* 세로 스크롤 활성화 */
-    border-radius: 12px;
-    -ms-overflow-style: none;
+ .navbar a {
+     color: darkgray;
+     text-decoration: none;
+     padding: 8px 16px;
+     font-size: 18px;
 }
-.modal-content::-webkit-scrollbar{
-  display:none;
+ .navbar a:hover {
+     color: white;
 }
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+/* 섹션 스타일 */
+ section {
+     padding: 80px 20px;
+    /* 네비게이션 바 공간 확보를 위해 패딩 추가 */
 }
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+ #section1 {
+     background-color: #f4a261;
 }
-
-.modal-content .url{
-	color: blue;
-			border-left: 4px solid blue;
-			padding-left: 8px;;
+ #section2 {
+     background-color: #2a9d8f;
+}
+ #section3 {
+     background-color: #e76f51;
 }
 /*********************************************************/
+ .modal1 {
+     display: flex;
+     position: fixed;
+     z-index: 1;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     overflow: hidden;
+     background-color: rgba(0, 0, 0, 0.7);
+    /* 배경 투명도 조절 */
+}
+ .modal-content {
+     background-color: #fefefe;
+     margin: 5% auto;
+    /* 모달을 화면 중앙에 위치시킴 */
+     padding: 20px;
+     border: 1px solid #888;
+     width: 80%;
+    /* 너비 조정 */
+     max-height: 80%;
+    /* 최대 높이 설정 */
+     overflow: hidden;
+    /* 스크롤을 없애고 내용이 넘치면 보이지 않게 함 */
+     word-wrap: break-word;
+    /* 단어가 넘어가면 줄 바꿈 */
+     white-space: normal;
+    /* 기본 줄 바꿈 허용 */
+     color: black;
+     overflow-y: auto;
+    /* 세로 스크롤 활성화 */
+     border-radius: 12px;
+     -ms-overflow-style: none;
+}
+ .modal-content::-webkit-scrollbar{
+     display:none;
+}
+ .close {
+     color: #aaa;
+     float: right;
+     font-size: 28px;
+     font-weight: bold;
+}
+ .close:hover, .close:focus {
+     color: black;
+     text-decoration: none;
+     cursor: pointer;
+}
+ .modal-content .url{
+     color: blue;
+     border-left: 4px solid blue;
+     padding-left: 8px;
+    ;
+}
+/*********************************************************/
+ 
