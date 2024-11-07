@@ -98,7 +98,7 @@ h3.typing2 {
         .profile-title {
             font-size: 2vw; /* h1 사이즈 */
             margin-right: 20px;
-		width: 180px;
+		/*width: 180px;*/
 		white-space: nowrap;
         }
         .profile-description {
