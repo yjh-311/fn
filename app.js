@@ -1,7 +1,6 @@
 const myapp = Vue.createApp({
 	data() {
 		return {
-			lightOn: false,
 			modalOn: false,
 			editmodalOn: false,
 			tuki: 0,
@@ -45,10 +44,10 @@ const myapp = Vue.createApp({
 			this.tuki++;
 			if (this.tuki > 5) {
 				this.tuki = 1; // 5를 초과하면 1로 리셋
-				alert("Edit Button Deactivated");
+				alert("Edit Disabled");
 			}
 			if (this.tuki == 5)
-				alert("Edit Button Activated");
+				alert("Edit Abled");
 		},
 
 		//////////////////////////////////////
@@ -323,7 +322,7 @@ function typing() {
 		clearInterval(tyInt);
 		
 		// h1.typing의 애니메이션을 멈추기 위해 animation-iteration-count 설정
-		$(".typing").css("animation-iteration-count", "1");
+		//$(".typing").css("animation-iteration-count", "1");
 	}
 }
 
