@@ -1,263 +1,282 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>포트폴리오</title>
-		<link rel="stylesheet" href="styles.css" />
-		<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>포트폴리오</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
-	</head>
-	<body>
-		<script>
-			const firebaseConfig = {
-			  apiKey: "AIzaSyDDltuySu-IwUUkFBWqpAzIpaKmSwl0s0g",
-			  authDomain: "frontend-de63a.firebaseapp.com",
-			  projectId: "frontend-de63a",
-			  storageBucket: "frontend-de63a.appspot.com",
-			  messagingSenderId: "534702262257",
-			  appId: "1:534702262257:web:2fe75a67924d4918dd6650",
-			  measurementId: "G-JFQ9QWB8Q2"
-			};
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    </head>
+    <body>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyDDltuySu-IwUUkFBWqpAzIpaKmSwl0s0g",
+                authDomain: "frontend-de63a.firebaseapp.com",
+                projectId: "frontend-de63a",
+                storageBucket: "frontend-de63a.appspot.com",
+                messagingSenderId: "534702262257",
+                appId: "1:534702262257:web:2fe75a67924d4918dd6650",
+                measurementId: "G-JFQ9QWB8Q2",
+            };
 
-			// Firebase 초기화
-			const app = firebase.initializeApp(firebaseConfig);
-			const analytics = firebase.analytics(app);
-		</script>
+            // Firebase 초기화
+            const app = firebase.initializeApp(firebaseConfig);
+            const analytics = firebase.analytics(app);
+        </script>
 
-		<div class="navbar w3-card">
-			<a href="#section1" onclick="scrollToSection(event, 'main')" class="w3-bar-item">Home</a>
-			<a href="#section2" onclick="scrollToSection(event, 'profile')" class="w3-bar-item">About</a>
-			<a href="#section3" onclick="scrollToSection(event, 'skill')" class="w3-bar-item">Skills</a>
-			<a href="#section4" onclick="scrollToSection(event, 'Archive')" class="w3-bar-item">Archive</a>
-			<a href="#section5" onclick="scrollToSection(event, 'project')" class="w3-bar-item">Project</a>
-			<a href="#section6" onclick="scrollToSection(event, 'contact')" class="w3-bar-item">Contact</a>
-		</div>
+        <div class="navbar w3-card">
+            <a href="#section1" onclick="scrollToSection(event, 'main')" class="w3-bar-item">Home</a>
+            <a href="#section2" onclick="scrollToSection(event, 'profile')" class="w3-bar-item">About</a>
+            <a href="#section3" onclick="scrollToSection(event, 'skill')" class="w3-bar-item">Skills</a>
+            <a href="#section4" onclick="scrollToSection(event, 'Archive')" class="w3-bar-item">Archive</a>
+            <a href="#section5" onclick="scrollToSection(event, 'project')" class="w3-bar-item">Project</a>
+            <a href="#section6" onclick="scrollToSection(event, 'contact')" class="w3-bar-item">Contact</a>
+        </div>
 
-		<!-- 패럴럭스 배경 섹션 -->
-		<section class="main-section" id="main">
-			<div style="display: inline-block; text-align: left;">
-				<div><h1 class="typing-txt">신입 개발자 유지환의 포트폴리오 입니다.</h1>
-			<h1 class="typing"></h1></div>
-			<h4 style="text-align: left;">"지식은 힘이 아니다. 적용할 때 힘이 된다."<br>— 데일 카네기
-			<br><br>공부를 하고 거기서 멈추는 것이 아니라 그 기술을 사용해서 개발을 해보거나 필요한 프로그램을 만드는 것을 좋아합니다.
-			<br>더 넓은 시야를 가지고, 부족한 부분은 열정적으로 배워나가겠습니다.
-			</h4>
+        <!-- 패럴럭스 배경 섹션 -->
+        <section class="main-section" id="main">
+            <div style="display: inline-block; text-align: left;">
+                <div>
+                    <h1 class="typing-txt">신입 개발자 유지환의 포트폴리오 입니다.</h1>
+                    <h1 class="typing"></h1>
+                </div>
+                <h4 style="text-align: left;">
+                    "지식은 힘이 아니다. 적용할 때 힘이 된다."<br />
+                    — 데일 카네기 <br />
+                    <br />
+                    공부를 하고 거기서 멈추는 것이 아니라 그 기술을 사용해서 개발을 해보거나 필요한 프로그램을 만드는 것을 좋아합니다. <br />
+                    더 넓은 시야를 가지고, 부족한 부분은 열정적으로 배워나가겠습니다.
+                </h4>
+            </div>
+        </section>
 
-			</div>
-		</section>
+        <!-- 프로필 섹션 -->
+        <section class="profile-section" id="profile">
+            <h2>About Me</h2>
+            <div class="about1-form-container">
+                <div style="display: flex;">
+                    <img src="https://cdg-portfolio.com/_next/static/media/name.fa083cfb.svg" alt="img" style="width: 32px; height: 32px;" />
+                    <div class="about1-form-item">
+                        <i class="fas fa-user"></i>
+                        <span class="about1-text">
+                            이름<br />
+                            <span>유지환</span>
+                        </span>
+                    </div>
+                </div>
 
-		<!-- 프로필 섹션 -->
-		<section class="profile-section" id="profile">
-			<h2>About Me</h2>
-			<div class="about1-form-container">
-		        <div style="display: flex;">
-					<img src="https://cdg-portfolio.com/_next/static/media/name.fa083cfb.svg" alt="img" style="width: 32px; height: 32px;">
-					<div class="about1-form-item">
-		            	<i class="fas fa-user"></i>
-		            	<span class="about1-text">이름<br><span>유지환</span></span>
-		        	</div>
-		        </div>
-		        
-		        <div style="display: flex;">
-					<img src="https://cdg-portfolio.com/_next/static/media/birthdate.5bfe2a95.svg" alt="img" style="width: 32px; height: 32px;">
-		        	<div class="about1-form-item">
-		            	<i class="fas fa-calendar-alt"></i>
-		            	<span class="about1-text">생년월일<br><span>03.03.11</span></span>
-		        	</div>
-		        </div>
-		        
-		        <div style="display: flex;">
-					<img src="https://cdg-portfolio.com/_next/static/media/location.665eb728.svg" alt="img" style="width: 32px; height: 32px;">
-			        <div class="about1-form-item">
-			            <i class="fas fa-map-marker-alt"></i>
-			            <span class="about1-text">위치<br>경기도 부천시</span>
-			        </div>
-			    </div>
-			        
-			    <div style="display: flex;">
-					<img src="https://cdg-portfolio.com/_next/static/media/phone.0b0f8955.svg" alt="img" style="width: 32px; height: 32px;">
-			        <div class="about1-form-item">
-			            <i class="fas fa-phone"></i>
-			            <span class="about1-text">연락처<br>010-8355-5242</span>
-			        </div>
-		        </div>
-		        
-		        <div style="display: flex;">
-					<img src="https://cdg-portfolio.com/_next/static/media/email.f8008661.svg" alt="img" style="width: 32px; height: 32px;">
-			        <div class="about1-form-item">
-			            <i class="fas fa-envelope"></i>
-			            <span class="about1-text">이메일<br><span>dbwlghks7274@gmail.com</span></span>
-			        </div>
-		        </div>
-		        
-		        <div style="display: flex;">
-					<img src="https://cdg-portfolio.com/_next/static/media/education.0867cbcb.svg" alt="img" style="width: 32px; height: 32px;">
-			        <div class="about1-form-item">
-			            <i class="fas fa-graduation-cap"></i>
-			            <span class="about1-text">학력<br><span>인하공업전문대학<br>(컴퓨터정보과)</span></span>
-			        </div>
-			    </div>
-    		</div>
-			<div class="profile-container">
-				<h1 class="profile-title">노력하는 사람</h1>
-				<div class="profile-description">
-					<p>
-						어릴때 부터 무언가를 만들기 좋아하는 성격에 만들어 보았던 도서 관리 앱으로 무언가를 코드로 만드는 것에 재미를 느껴 그때부터 개발자를 목표로 하게 되었습니다.<br />
-						앞으로도 배우기 위해 노력하는 사람이 되겠습니다.<br />
-						잘부탁합니다.
-					</p>
-				</div>
-			</div>
-			
-			 
-			
-		</section>
+                <div style="display: flex;">
+                    <img src="https://cdg-portfolio.com/_next/static/media/birthdate.5bfe2a95.svg" alt="img" style="width: 32px; height: 32px;" />
+                    <div class="about1-form-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span class="about1-text">
+                            생년월일<br />
+                            <span>03.03.11</span>
+                        </span>
+                    </div>
+                </div>
 
-		<!-- 스킬 섹션 -->
-		<section class="skill-section" id="skill">
-			<h2>Skills</h2>
-			<div class="w3-container w3-white w3-card-4 w3-round skill_card">
-				<div style="color: black;">
-					<div class="s6 skill_item">
-						<img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Flan.svg?alt=media&token=4e325546-aca0-4a94-b14d-c0eb298ad37f" />
-						<span>Language:</span>
-						<span class="value w3-green w3-text-black">JavaScript</span>
-						<span class="value w3-green w3-text-black">Python</span>
-						<span class="value w3-light-blue">Java</span>
-						<span class="value w3-orange">C</span>
-						<span class="value w3-light-blue">C#</span>
-						<span class="value w3-light-blue">C++</span>
-					</div>
-					<div class="s6 skill_item">
-						<img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Ffront.svg?alt=media&token=3252f202-6d13-43a5-a0d2-7f6285498f09" />
-						<span>Frontend:</span>
-						<span class="value w3-orange">Vue.js</span>
-						<span class="value w3-orange">React</span>
-						<span class="value w3-green w3-text-black">HTML</span>
-						<span class="value w3-green w3-text-black">CSS</span>
-						<span class="value w3-light-blue">sass</span>
-					</div>
-					<div class="s6 skill_item">
-						<img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fback.svg?alt=media&token=79dee584-3324-40d2-81e2-69ed75118372" />
-						<span>Backend:</span>
-						<span class="value w3-orange">Flask</span>
-						<span class="value w3-green w3-text-black">tomcat</span>
-						<span class="value w3-orange">firebase</span>
-					</div>
-					<div class="s6 skill_item">
-						<img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fdb.svg?alt=media&token=3eed3edf-6134-433e-a037-3fe0a2736df0" />
-						<span>Database:</span>
-						<span class="value w3-orange">MariaDB</span>
-						<span class="value w3-orange">SQLite</span>
-						<span class="value w3-light-blue">AWS</span>
-						<span class="value w3-light-blue">Oracle</span>
-						<span class="value w3-green w3-text-black">MySQL</span>
-					</div>
-				</div>
-				<div class="w3-container" style="display: flex; align-items: center; margin-bottom: 10px;">
-    <div>
-        <span class="w3-circle w3-orange w3-text-orange" style="width: 5px; height: 5px; font-size: 5px; vertical-align: middle; display: inline-flex;">o</span>
-        <span>Tried</span>
-    </div>
-    <div style="margin-left: 8px;">
-        <span class="w3-circle w3-light-blue w3-text-light-blue" style="width: 5px; height: 5px; font-size: 5px; vertical-align: middle; display: inline-flex;">o</span>
-        <span>Familiar</span>
-    </div>
-    <div style="margin-left: 8px;">
-        <span class="w3-circle w3-green w3-text-green" style="width: 5px; height: 5px; font-size: 5px; vertical-align: middle; display: inline-flex;">o</span>
-        <span>Skilled</span>
-    </div>
-</div>
-			</div>
-		</section>
+                <div style="display: flex;">
+                    <img src="https://cdg-portfolio.com/_next/static/media/location.665eb728.svg" alt="img" style="width: 32px; height: 32px;" />
+                    <div class="about1-form-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span class="about1-text">
+                            위치<br />
+                            경기도 부천시
+                        </span>
+                    </div>
+                </div>
 
-		<section class="Archive-section w3-sand" id="Archive">
-			<div>
-				<h2>Archive</h2>
-				<div class="archive-content">
-					<div class="github-container">
-						<img src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fgithub_icon_white.png?alt=media&token=61a3b82f-f529-4364-9b80-1dacbefbab36" alt="GitHub Icon" class="github-icon" />
-						<div>
-							<h1>Github</h1>
-							<a href="https://github.com/yjh-311" class="github-link w3-text-blue">https://github.com/yjh-311</a>
-							<p>소스 코드 저장소</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-<div id="myapp">
-		<section id="project">
-			<div class="project_title">
-				<h2 @click="increment">Projects</h2>
-			</div>
-			
-				<!-- 프로젝트 추가 폼 -->
-				<div v-if="tuki == 5">
-					<form id="projectForm" @submit.prevent="addProject" class="w3-container w3-card w3-padding-large">
-						<div class="w3-row edit_title">
-							<h2 class="w3-text-teal">프로젝트 추가</h2>
-							<button v-on:click="lightOn = !lightOn" class="w3-button w3-hover-teal w3-teal w3-circle x_btn">X</button>
-						</div>
+                <div style="display: flex;">
+                    <img src="https://cdg-portfolio.com/_next/static/media/phone.0b0f8955.svg" alt="img" style="width: 32px; height: 32px;" />
+                    <div class="about1-form-item">
+                        <i class="fas fa-phone"></i>
+                        <span class="about1-text">
+                            연락처<br />
+                            010-8355-5242
+                        </span>
+                    </div>
+                </div>
 
-						<label for="name" class="w3-text-teal"><b>이름:</b></label>
-						<input type="text" id="name" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required />
-						<br />
-						
-						<label for="sub_title" class="w3-text-teal"><b>부제목:</b></label>
-						<input type="text" id="sub_title" v-model="newProject.sub_title" class="w3-input w3-border w3-round w3-hover-border-black" required />
-						<br />
+                <div style="display: flex;">
+                    <img src="https://cdg-portfolio.com/_next/static/media/email.f8008661.svg" alt="img" style="width: 32px; height: 32px;" />
+                    <div class="about1-form-item">
+                        <i class="fas fa-envelope"></i>
+                        <span class="about1-text">
+                            이메일<br />
+                            <span>dbwlghks7274@gmail.com</span>
+                        </span>
+                    </div>
+                </div>
 
-						<label for="description" class="w3-text-teal"><b>설명:</b></label>
-						<!--<input type="text" v-model="newProject.description" class="w3-input w3-border w3-round" required>-->
-						<textarea id="description" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="프로젝트 설명을 입력하세요... (항목은 줄별로 구분)"></textarea>
-						<br />
+                <div style="display: flex;">
+                    <img src="https://cdg-portfolio.com/_next/static/media/education.0867cbcb.svg" alt="img" style="width: 32px; height: 32px;" />
+                    <div class="about1-form-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span class="about1-text">
+                            학력<br />
+                            <span>
+                                인하공업전문대학<br />
+                                (컴퓨터정보과)
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-container">
+                <h1 class="profile-title">노력하는 사람</h1>
+                <div class="profile-description">
+                    <p>
+                        어릴때 부터 무언가를 만들기 좋아하는 성격에 만들어 보았던 도서 관리 앱으로 무언가를 코드로 만드는 것에 재미를 느껴 그때부터 개발자를 목표로 하게 되었습니다.<br />
+                        앞으로도 배우기 위해 노력하는 사람이 되겠습니다.<br />
+                        잘부탁합니다.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-						<!--<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
+        <!-- 스킬 섹션 -->
+        <section class="skill-section" id="skill">
+            <h2>Skills</h2>
+            <div class="w3-container w3-white w3-card-4 w3-round skill_card">
+                <div style="color: black;">
+                    <div class="s6 skill_item">
+                        <img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Flan.svg?alt=media&token=4e325546-aca0-4a94-b14d-c0eb298ad37f" />
+                        <span>Language:</span>
+                        <span class="value w3-green w3-text-black">JavaScript</span>
+                        <span class="value w3-green w3-text-black">Python</span>
+                        <span class="value w3-light-blue">Java</span>
+                        <span class="value w3-orange">C</span>
+                        <span class="value w3-light-blue">C#</span>
+                        <span class="value w3-light-blue">C++</span>
+                    </div>
+                    <div class="s6 skill_item">
+                        <img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Ffront.svg?alt=media&token=3252f202-6d13-43a5-a0d2-7f6285498f09" />
+                        <span>Frontend:</span>
+                        <span class="value w3-orange">Vue.js</span>
+                        <span class="value w3-orange">React</span>
+                        <span class="value w3-green w3-text-black">HTML</span>
+                        <span class="value w3-green w3-text-black">CSS</span>
+                        <span class="value w3-light-blue">sass</span>
+                    </div>
+                    <div class="s6 skill_item">
+                        <img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fback.svg?alt=media&token=79dee584-3324-40d2-81e2-69ed75118372" />
+                        <span>Backend:</span>
+                        <span class="value w3-orange">Flask</span>
+                        <span class="value w3-green w3-text-black">tomcat</span>
+                        <span class="value w3-orange">firebase</span>
+                    </div>
+                    <div class="s6 skill_item">
+                        <img class="skill_item_image" src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fdb.svg?alt=media&token=3eed3edf-6134-433e-a037-3fe0a2736df0" />
+                        <span>Database:</span>
+                        <span class="value w3-orange">MariaDB</span>
+                        <span class="value w3-orange">SQLite</span>
+                        <span class="value w3-light-blue">AWS</span>
+                        <span class="value w3-light-blue">Oracle</span>
+                        <span class="value w3-green w3-text-black">MySQL</span>
+                    </div>
+                </div>
+                <div class="w3-container" style="display: flex; align-items: center; margin-bottom: 10px;">
+                    <div>
+                        <span class="w3-circle w3-orange w3-text-orange" style="width: 5px; height: 5px; font-size: 5px; vertical-align: middle; display: inline-flex;">o</span>
+                        <span>Tried</span>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <span class="w3-circle w3-light-blue w3-text-light-blue" style="width: 5px; height: 5px; font-size: 5px; vertical-align: middle; display: inline-flex;">o</span>
+                        <span>Familiar</span>
+                    </div>
+                    <div style="margin-left: 8px;">
+                        <span class="w3-circle w3-green w3-text-green" style="width: 5px; height: 5px; font-size: 5px; vertical-align: middle; display: inline-flex;">o</span>
+                        <span>Skilled</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="Archive-section w3-sand" id="Archive">
+            <div>
+                <h2>Archive</h2>
+                <div class="archive-content">
+                    <div class="github-container">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fgithub_icon_white.png?alt=media&token=61a3b82f-f529-4364-9b80-1dacbefbab36" alt="GitHub Icon" class="github-icon" />
+                        <div>
+                            <h1>Github</h1>
+                            <a href="https://github.com/yjh-311" class="github-link w3-text-blue">https://github.com/yjh-311</a>
+                            <p>소스 코드 저장소</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="myapp">
+            <section id="project">
+                <div class="project_title">
+                    <h2 @click="increment">Projects</h2>
+                </div>
+
+                <!-- 프로젝트 추가 폼 -->
+                <div v-if="tuki == 5">
+                    <form id="projectForm" @submit.prevent="addProject" class="w3-container w3-card w3-padding-large">
+                        <div class="w3-row edit_title">
+                            <h2 class="w3-text-teal">프로젝트 추가</h2>
+                            <button v-on:click="lightOn = !lightOn" class="w3-button w3-hover-teal w3-teal w3-circle x_btn">X</button>
+                        </div>
+
+                        <label for="name" class="w3-text-teal"><b>이름:</b></label>
+                        <input type="text" id="name" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required />
+                        <br />
+
+                        <label for="sub_title" class="w3-text-teal"><b>부제목:</b></label>
+                        <input type="text" id="sub_title" v-model="newProject.sub_title" class="w3-input w3-border w3-round w3-hover-border-black" required />
+                        <br />
+
+                        <label for="description" class="w3-text-teal"><b>설명:</b></label>
+                        <!--<input type="text" v-model="newProject.description" class="w3-input w3-border w3-round" required>-->
+                        <textarea id="description" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="프로젝트 설명을 입력하세요... (항목은 줄별로 구분)"></textarea>
+                        <br />
+
+                        <!--<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
 			<input type="file" id="image" @change="onFileChange" class="w3-input w3-border w3-round" required>-->
-						<div class="upload-container">
-							<label for="image" class="w3-button w3-teal w3-round w3-border w3-hover-border-black w3-hover-green">이미지 업로드:</label>
-							<input type="file" id="image" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none;"/>
-						</div>
-						<br />
+                        <div class="upload-container">
+                            <label for="image" class="w3-button w3-teal w3-round w3-border w3-hover-border-black w3-hover-green">이미지 업로드:</label>
+                            <input type="file" id="image" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none;" />
+                        </div>
+                        <br />
 
-						<label for="date_start" class="w3-text-teal"><b>부터:</b></label>
-						<input type="date" id="date_start" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required />
-						<br />
+                        <label for="date_start" class="w3-text-teal"><b>부터:</b></label>
+                        <input type="date" id="date_start" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required />
+                        <br />
 
-						<label for="date_end" class="w3-text-teal"><b>까지:</b></label>
-						<input type="date" id="date_end" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required />
-				
-				<br>
-						<label for="projectURL" class="w3-text-teal"><b>프로젝트 URL:</b></label>
-						<input type="url" id="projectURL" v-model="newProject.projectURL" class="w3-input w3-border w3-round w3-hover-border-black" />
-						<br>
-						<label for="tc" class="w3-text-teal"><b>사용 기술:</b></label>
-						<input type="text" id="tc" v-model="newProject.tc" class="w3-input w3-border w3-round w3-hover-border-black" required placeholder="쉼표로 구분 됨."/>
-						<br>
-<label for="project_background" class="w3-text-teal"><b>Background:</b></label>
-<textarea id="project_background" v-model="newProject.project_background" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Background를 입력하세요..."></textarea>
-						<br>
-<label for="Meaning" class="w3-text-teal"><b>Meaning:</b></label>
-<textarea id="Meaning" v-model="newProject.Meaning" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Meaning을 입력하세요..."></textarea>
+                        <label for="date_end" class="w3-text-teal"><b>까지:</b></label>
+                        <input type="date" id="date_end" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required />
 
-						
-						
-						
-						<button type="submit" class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top w3-right">추가</button>
-					</form>
-				</div>
-				<br />
-				<div class="portfolio" id="portfolio-container">
-					<!-- 프로젝트 목록 표시 -->
-					<!--<div v-for="project in projects" :key="project.id" class="project w3-border w3-hover-border-white  w3-border-black">
+                        <br />
+                        <label for="projectURL" class="w3-text-teal"><b>프로젝트 URL:</b></label>
+                        <input type="url" id="projectURL" v-model="newProject.projectURL" class="w3-input w3-border w3-round w3-hover-border-black" />
+                        <br />
+                        <label for="tc" class="w3-text-teal"><b>사용 기술:</b></label>
+                        <input type="text" id="tc" v-model="newProject.tc" class="w3-input w3-border w3-round w3-hover-border-black" required placeholder="쉼표로 구분 됨." />
+                        <br />
+                        <label for="project_background" class="w3-text-teal"><b>Background:</b></label>
+                        <textarea id="project_background" v-model="newProject.project_background" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Background를 입력하세요..."></textarea>
+                        <br />
+                        <label for="Meaning" class="w3-text-teal"><b>Meaning:</b></label>
+                        <textarea id="Meaning" v-model="newProject.Meaning" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Meaning을 입력하세요..."></textarea>
+
+                        <button type="submit" class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top w3-right">추가</button>
+                    </form>
+                </div>
+                <br />
+                <div class="portfolio" id="portfolio-container">
+                    <!-- 프로젝트 목록 표시 -->
+                    <!--<div v-for="project in projects" :key="project.id" class="project w3-border w3-hover-border-white  w3-border-black">
                 <h3>{{ project.name }}</h3>
                 <p>{{ project.description }}</p>
                 <img :src="project.link" alt="project image">
@@ -265,188 +284,151 @@
                 <button v-if="lightOn" class="delete-btn" @click="deleteProject(project.id)">삭제</button>
             </div>-->
 
-					<div class="imgHoverEvent event1 project w3-border w3-hover-border-gray w3-border-black" v-for="project in projects" :key="project.id">
-						<div class="imgBox">
-							<img v-if="project.imageUrl" :src="project.imageUrl" alt="" class="project-image" />
-							<img v-else src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fproject_default.png?alt=media&token=642f62e7-1317-4b5d-8ed7-ebf0c63d8368" alt="" class="project-image" />
-						</div>
-							
-						
-						<div class="hoverBox"> 
-							<h3 class="p1">{{ project.name }}</h3>
-							<hr>
-							<h3 class="p2">{{ project.sub_title }}</h3>
-							<!--<p class="p3">{{project.description}}</p>-->
-							<ul class="scrollable-list">
-                					<li class="p3" v-for="(item, index) in formatDescription(project.description)" :key="index">{{ item }}</li>
-            				</ul>
-							<p class="p3 url" v-if="project.projectURL" @click="openLink(project.projectURL)" style="cursor: pointer;">{{ project.projectURL }}</p>
-							
-							<div class="w3-border w3-border-orange tc">
-								<p class="p3">#{{ transformedTechnologies(project.technologies) }}</p>
-							</div>
-							
-							
-							<p class="p3 w3-display-bottomleft project-info w3-text-gray">
-    <span> {{ project.date_start }} ~ {{ project.date_end }}</span>
-    <!-- 삭제 버튼 클릭 시 확인 창 표시 -->
-<button v-if="lightOn" 
-        class="w3-button w3-hover-red w3-teal w3-round-large delete-btn" 
-        @click="confirmDelete(project.id)" 
-        style="width: 60px;">
-    삭제
-</button>
+                    <div class="imgHoverEvent event1 project w3-border w3-hover-border-gray w3-border-black" v-for="project in projects" :key="project.id">
+                        <div class="imgBox">
+                            <img v-if="project.imageUrl" :src="project.imageUrl" alt="" class="project-image" />
+                            <img v-else src="https://firebasestorage.googleapis.com/v0/b/frontend-de63a.appspot.com/o/icon%2Fproject_default.png?alt=media&token=642f62e7-1317-4b5d-8ed7-ebf0c63d8368" alt="" class="project-image" />
+                        </div>
 
-    <!-- 수정 버튼 -->
-<button v-if="lightOn" class="w3-button w3-hover-teal w3-teal w3-round-large" @click="openEditModal(project)">Edit</button>
+                        <div class="hoverBox">
+                            <h3 class="p1">{{ project.name }}</h3>
+                            <hr />
+                            <h3 class="p2">{{ project.sub_title }}</h3>
+                            <!--<p class="p3">{{project.description}}</p>-->
+                            <ul class="scrollable-list">
+                                <li class="p3" v-for="(item, index) in formatDescription(project.description)" :key="index">{{ item }}</li>
+                            </ul>
+                            <p class="p3 url" v-if="project.projectURL" @click="openLink(project.projectURL)" style="cursor: pointer;">{{ project.projectURL }}</p>
 
-<!-- 상세 보기 버튼 -->
-<button class="w3-button w3-hover-black w3-hover-text-white w3-hover-border-gray w3-white w3-border w3-border-black w3-round-large w3-display-right" @click="openModal(project)" style="width: 120px; margin-right: 12px;">ReadMe.md</button>
+                            <div class="w3-border w3-border-orange tc">
+                                <p class="p3">#{{ transformedTechnologies(project.technologies) }}</p>
+                            </div>
 
-</p>
+                            <p class="p3 w3-display-bottomleft project-info w3-text-gray">
+                                <span> {{ project.date_start }} ~ {{ project.date_end }}</span>
+                                <!-- 삭제 버튼 클릭 시 확인 창 표시 -->
+                                <button v-if="lightOn" class="w3-button w3-hover-red w3-teal w3-round-large delete-btn" @click="confirmDelete(project.id)" style="width: 60px;">
+                                    삭제
+                                </button>
 
-						</div>
-					</div>
-				</div>
-				
-				
-				<br />
-			<!--</div>myapp-->
-		
+                                <!-- 수정 버튼 -->
+                                <button v-if="lightOn" class="w3-button w3-hover-teal w3-teal w3-round-large" @click="openEditModal(project)">Edit</button>
 
+                                <!-- 상세 보기 버튼 -->
+                                <button
+                                    class="w3-button w3-hover-black w3-hover-text-white w3-hover-border-gray w3-white w3-border w3-border-black w3-round-large w3-display-right"
+                                    @click="openModal(project)"
+                                    style="width: 120px; margin-right: 12px;"
+                                >
+                                    ReadMe.md
+                                </button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+                <br/>
+                <div class="modal1" v-if="modalOn">
+                    <div class="modal-content">
+                        <span class="close" @click="closeModal">&times;</span>
+                        <h2>{{ selectedProject.name }}</h2>
+                        <p class="w3-text-gray">{{ selectedProject.date_start }} ~ {{ selectedProject.date_end }}</p>
+                        <hr />
 
-<!--*********************************************************-->
-<div class="modal1" v-if="modalOn">
-    <div class="modal-content">
-        <span class="close" @click="closeModal">&times;</span>
-        <h2>{{ selectedProject.name }}</h2>
-        <p class="w3-text-gray">{{ selectedProject.date_start }} ~ {{ selectedProject.date_end }}</p>
-        <hr>
-        
-        <div v-if="selectedProject.projectURL">
-			<h2 class="heading-element">🔗 Deployment URL</h2>
-        <p class="url" @click="openLink(selectedProject.projectURL)" style="cursor: pointer;">{{ selectedProject.projectURL }}</p>
-        </div>
-			
-        
-        <br v-if="selectedProject.projectURL">
-        <h2 class="p1" dir="auto">📌 Summary</h2>
-        <p style="font-size: 16px;">{{ selectedProject.sub_title }}</p>
-        <!--<p>{{ selectedProject.description }}</p>-->
-        <ul>
-            <li v-for="(item, index) in formatDescription(selectedProject.description)" :key="index">{{ item }}</li>
-        </ul>
-        
-        <br>
-        <h2 class="heading-element" dir="auto">🤔 Background</h2>
-        <!--<p>{{selectedProject.background}}</p>-->
-        <p v-html="formatText(selectedProject.background)"></p>
-        
-        <br>
-        <h2 class="heading-element" dir="auto">🔍 Meaning</h2>
-        <!--<p>{{selectedProject.meaning}}</p>-->
-        <p v-html="formatText(selectedProject.meaning)"></p>
-        
-        <br>
-        <h2 class="heading-element" dir="auto">🔨 Technology Stack(s)</h2>
-        <p>#{{ transformedTechnologies(selectedProject.technologies) }}</p>
-        
-    </div>
-</div>
+                        <div v-if="selectedProject.projectURL">
+                            <h2 class="heading-element">🔗 Deployment URL</h2>
+                            <p class="url" @click="openLink(selectedProject.projectURL)" style="cursor: pointer;">{{ selectedProject.projectURL }}</p>
+                        </div>
 
-<!--*********************************************************-->
+                        <br v-if="selectedProject.projectURL" />
+                        <h2 class="p1" dir="auto">📌 Summary</h2>
+                        <p style="font-size: 16px;">{{ selectedProject.sub_title }}</p>
+                        <!--<p>{{ selectedProject.description }}</p>-->
+                        <ul>
+                            <li v-for="(item, index) in formatDescription(selectedProject.description)" :key="index">{{ item }}</li>
+                        </ul>
 
+                        <br />
+                        <h2 class="heading-element" dir="auto">🤔 Background</h2>
+                        <!--<p>{{selectedProject.background}}</p>-->
+                        <p v-html="formatText(selectedProject.background)"></p>
 
-<div class="modal1" v-if="editmodalOn">
-    <div class="modal-content">
-        <span class="close" @click="closeModal">&times;</span>
-        <!--<h2>프로젝트 수정</h2>-->
-						<div class="w3-row edit_title">
-							<h2 class="w3-text-teal">프로젝트 추가</h2>
-						</div>
+                        <br />
+                        <h2 class="heading-element" dir="auto">🔍 Meaning</h2>
+                        <!--<p>{{selectedProject.meaning}}</p>-->
+                        <p v-html="formatText(selectedProject.meaning)"></p>
 
-						<label for="name" class="w3-text-teal"><b>이름:</b></label>
-						<input type="text" id="name" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required />
-						<br />
-						
-						<label for="sub_title" class="w3-text-teal"><b>부제목:</b></label>
-						<input type="text" id="sub_title" v-model="newProject.sub_title" class="w3-input w3-border w3-round w3-hover-border-black" required />
-						<br />
+                        <br />
+                        <h2 class="heading-element" dir="auto">🔨 Technology Stack(s)</h2>
+                        <p>#{{ transformedTechnologies(selectedProject.technologies) }}</p>
+                    </div>
+                </div>
 
-						<label for="description" class="w3-text-teal"><b>설명:</b></label>
-						<!--<input type="text" v-model="newProject.description" class="w3-input w3-border w3-round" required>-->
-						<textarea id="description" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="프로젝트 설명을 입력하세요... (항목은 줄별로 구분)"></textarea>
-						<br />
+                <div class="modal1" v-if="editmodalOn">
+                    <div class="modal-content">
+                        <span class="close" @click="closeModal">&times;</span>
+                        <div class="w3-row edit_title">
+                            <h2 class="w3-text-teal">프로젝트 추가</h2>
+                        </div>
 
-						<!--<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
+                        <label for="name" class="w3-text-teal"><b>이름:</b></label>
+                        <input type="text" id="name" v-model="newProject.name" class="w3-input w3-border w3-round w3-hover-border-black" required />
+                        <br />
+
+                        <label for="sub_title" class="w3-text-teal"><b>부제목:</b></label>
+                        <input type="text" id="sub_title" v-model="newProject.sub_title" class="w3-input w3-border w3-round w3-hover-border-black" required />
+                        <br />
+
+                        <label for="description" class="w3-text-teal"><b>설명:</b></label>
+                        <!--<input type="text" v-model="newProject.description" class="w3-input w3-border w3-round" required>-->
+                        <textarea id="description" v-model="newProject.description" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="프로젝트 설명을 입력하세요... (항목은 줄별로 구분)"></textarea>
+                        <br />
+
+                        <!--<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
 			<input type="file" id="image" @change="onFileChange" class="w3-input w3-border w3-round" required>-->
-						<div class="upload-container">
-							<label for="image" class="w3-button w3-teal w3-round">이미지 업로드:</label>
-							<input type="file" id="image" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none;"/>
-						</div>
-						<br />
+                        <div class="upload-container">
+                            <label for="image" class="w3-button w3-teal w3-round">이미지 업로드:</label>
+                            <input type="file" id="image" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none;" />
+                        </div>
+                        <br />
 
-						<label for="date_start" class="w3-text-teal"><b>부터:</b></label>
-						<input type="date" id="date_start" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required />
-						<br />
+                        <label for="date_start" class="w3-text-teal"><b>부터:</b></label>
+                        <input type="date" id="date_start" v-model="newProject.date_start" class="w3-input w3-border w3-round w3-hover-border-black" required />
+                        <br />
 
-						<label for="date_end" class="w3-text-teal"><b>까지:</b></label>
-						<input type="date" id="date_end" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required />
-				
-				<br>
-						<label for="projectURL" class="w3-text-teal"><b>프로젝트 URL:</b></label>
-						<input type="url" id="projectURL" v-model="newProject.projectURL" class="w3-input w3-border w3-round w3-hover-border-black" />
-						<br>
-						<label for="tc" class="w3-text-teal"><b>사용 기술:</b></label>
-						<input type="text" id="tc" v-model="newProject.technologies" class="w3-input w3-border w3-round w3-hover-border-black" required placeholder="쉼표로 구분 됨."/>
-						<br>
-<label for="project_background" class="w3-text-teal"><b>Background:</b></label>
-<textarea id="project_background" v-model="newProject.background" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Background를 입력하세요..."></textarea>
-						<br>
-<label for="Meaning" class="w3-text-teal"><b>Meaning:</b></label>
-<textarea id="Meaning" v-model="newProject.meaning" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Meaning을 입력하세요..."></textarea>
+                        <label for="date_end" class="w3-text-teal"><b>까지:</b></label>
+                        <input type="date" id="date_end" v-model="newProject.date_end" class="w3-input w3-border w3-round w3-hover-border-black" required />
 
-						
-						
-						
-					
+                        <br />
+                        <label for="projectURL" class="w3-text-teal"><b>프로젝트 URL:</b></label>
+                        <input type="url" id="projectURL" v-model="newProject.projectURL" class="w3-input w3-border w3-round w3-hover-border-black" />
+                        <br />
+                        <label for="tc" class="w3-text-teal"><b>사용 기술:</b></label>
+                        <input type="text" id="tc" v-model="newProject.technologies" class="w3-input w3-border w3-round w3-hover-border-black" required placeholder="쉼표로 구분 됨." />
+                        <br />
+                        <label for="project_background" class="w3-text-teal"><b>Background:</b></label>
+                        <textarea id="project_background" v-model="newProject.background" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Background를 입력하세요..."></textarea>
+                        <br />
+                        <label for="Meaning" class="w3-text-teal"><b>Meaning:</b></label>
+                        <textarea id="Meaning" v-model="newProject.meaning" class="w3-input w3-border w3-round w3-hover-border-black" required rows="6" placeholder="Meaning을 입력하세요..."></textarea>
 
+                        <button class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top w3-right" @click="updateProject">수정 완료</button>
+                    </div>
+                </div>
 
-        <button class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top w3-right" @click="updateProject">수정 완료</button>
-    </div>
-</div>
+                <!--*********************************************************-->
+            </section>
+        </div>
+        <!--myapp-->
 
+        <section class="contact-section" id="contact">
+            <div class="contact_title">
+                <h2>Contact Me!</h2>
+                <br />
+                <h3>Email : kusatyd@naver.com</h3>
+            </div>
+        </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--*********************************************************-->
-</section></div><!--myapp-->
-
-
-
-
-
-
-		<section class="contact-section" id="contact">
-			<div class="contact_title">
-				<h2>Contact Me!</h2>
-				<br />
-				<h3>Email : kusatyd@naver.com</h3>
-			</div>
-		</section>
-
-		<script src="app.js"></script>
-	</body>
+        <script src="app.js"></script>
+    </body>
 </html>
