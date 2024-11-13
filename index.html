@@ -307,12 +307,12 @@
                             <p class="p3 w3-display-bottomleft project-info w3-text-gray">
                                 <span> {{ project.date_start }} ~ {{ project.date_end }}</span>
                                 <!-- 삭제 버튼 클릭 시 확인 창 표시 -->
-                                <button v-if="lightOn" class="w3-button w3-hover-red w3-teal w3-round-large delete-btn" @click="confirmDelete(project.id)" style="width: 60px;">
+                                <button v-if="tuki == 5" class="w3-button w3-hover-red w3-teal w3-round-large delete-btn" @click="confirmDelete(project.id)" style="width: 60px;">
                                     삭제
                                 </button>
 
                                 <!-- 수정 버튼 -->
-                                <button v-if="lightOn" class="w3-button w3-hover-teal w3-teal w3-round-large" @click="openEditModal(project)">Edit</button>
+                                <button v-if="tuki == 5" class="w3-button w3-hover-teal w3-teal w3-round-large" @click="openEditModal(project)">Edit</button>
 
                                 <!-- 상세 보기 버튼 -->
                                 <button
@@ -327,7 +327,10 @@
                     </div>
                 </div>
 
-                <br/>
+                <br />
+                <!--</div>myapp-->
+
+                <!--*********************************************************-->
                 <div class="modal1" v-if="modalOn">
                     <div class="modal-content">
                         <span class="close" @click="closeModal">&times;</span>
@@ -364,9 +367,12 @@
                     </div>
                 </div>
 
+                <!--*********************************************************-->
+
                 <div class="modal1" v-if="editmodalOn">
                     <div class="modal-content">
                         <span class="close" @click="closeModal">&times;</span>
+                        <!--<h2>프로젝트 수정</h2>-->
                         <div class="w3-row edit_title">
                             <h2 class="w3-text-teal">프로젝트 추가</h2>
                         </div>
@@ -387,8 +393,8 @@
                         <!--<label for="image" class="w3-text-teal"><b>이미지 업로드:</b></label>
 			<input type="file" id="image" @change="onFileChange" class="w3-input w3-border w3-round" required>-->
                         <div class="upload-container">
-                            <label for="image" class="w3-button w3-teal w3-round">이미지 업로드:</label>
-                            <input type="file" id="image" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none;" />
+                            <label for="image1" class="w3-button w3-teal w3-round">이미지 업로드:</label>
+                            <input type="file" id="image1" ref="fileInput" @change="onFileChange" accept="image/*" style="display: none;" />
                         </div>
                         <br />
 
