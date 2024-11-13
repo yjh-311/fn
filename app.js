@@ -46,6 +46,8 @@ const myapp = Vue.createApp({
             if (this.tuki == 5) alert("Edit Abled");
         },
 
+        //////////////////////////////////////
+
         openModal(project) {
             this.selectedProject = project; // 선택된 프로젝트 설정
             this.modalOn = true; // 상세보기 모달 열기
@@ -53,21 +55,37 @@ const myapp = Vue.createApp({
         closeModal() {
             this.modalOn = false; // 상세보기 모달 닫기
             this.editmodalOn = false; // 수정 모달 닫기
+            this.newProject = {
+                name: "",
+                description: "",
+                imageUrl: null,
+                date_start: "",
+                date_end: "",
+                projectURL: "",
+                tc: "",
+                project_background: "",
+                Meaning: "",
+                sub_title: "",
+            };
+            this.tuki = 5;
         },
         openEditModal(project) {
             this.newProject = project; // 선택된 프로젝트 설정
             this.editmodalOn = true; // 상세보기 모달 열기
+            this.tuki = 0;
         },
         // 이미지 파일 선택 처리
         onFileChange(event) {
             const file = event.target.files[0];
             if (file) {
                 this.newProject.imageFile = file;
+                alert("이미지가 선택되었습니다: " + this.newProject.imageFile.name);
             }
         },
 
         // 프로젝트 업데이트 함수
         updateProject() {
+            this.tuki = 5;
             const index = this.projects.findIndex((p) => p.id === this.newProject.id);
             if (index !== -1) {
                 // Firebase Storage에 이미지 업로드가 필요한 경우
@@ -308,6 +326,9 @@ function typing() {
     } else {
         // 끝나면 반복 종료
         clearInterval(tyInt);
+
+        // h1.typing의 애니메이션을 멈추기 위해 animation-iteration-count 설정
+        //$(".typing").css("animation-iteration-count", "1");
     }
 }
 
@@ -318,10 +339,3 @@ function scrollToSection(event, sectionId) {
     const section = document.getElementById(sectionId);
     section.scrollIntoView({ behavior: "smooth" });
 }
-
-//이미지
-document.getElementById("image").addEventListener("change", function () {
-    if (this.files && this.files[0]) {
-        alert("이미지가 선택되었습니다: " + this.files[0].name);
-    }
-});
