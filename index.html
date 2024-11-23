@@ -279,11 +279,10 @@
                     <!--<div v-for="project in projects" :key="project.id" class="project w3-border w3-hover-border-white  w3-border-black">
                 <h3>{{ project.name }}</h3>
                 <p>{{ project.description }}</p>
-                <img :src="project.link" alt="project image">
+                <img :src="project.link" alt="project image" loading="lazy">
                 <p class="date">Completed on: {{ project.date }}</p>
                 <button v-if="lightOn" class="delete-btn" @click="deleteProject(project.id)">삭제</button>
             </div>-->
-
                     <div class="imgHoverEvent event1 project w3-border w3-hover-border-gray w3-border-black" v-for="project in projects" :key="project.id">
                         <div class="imgBox">
                             <img v-if="project.imageUrl" :src="project.imageUrl" alt="" class="project-image" />
@@ -327,10 +326,7 @@
                     </div>
                 </div>
 
-                <br />
-                <!--</div>myapp-->
-
-                <!--*********************************************************-->
+                <br/>
                 <div class="modal1" v-if="modalOn">
                     <div class="modal-content">
                         <span class="close" @click="closeModal">&times;</span>
@@ -366,8 +362,6 @@
                         <p>#{{ transformedTechnologies(selectedProject.technologies) }}</p>
                     </div>
                 </div>
-
-                <!--*********************************************************-->
 
                 <div class="modal1" v-if="editmodalOn">
                     <div class="modal-content">
@@ -421,8 +415,6 @@
                         <button class="w3-button w3-hover-teal w3-teal w3-round-large w3-margin-top w3-right" @click="updateProject">수정 완료</button>
                     </div>
                 </div>
-
-                <!--*********************************************************-->
             </section>
         </div>
         <!--myapp-->
