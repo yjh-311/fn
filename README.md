@@ -11,5 +11,4 @@
 ## 기술 스택
 - **Vue.js 3**
 - **Firebase Realtime Database**
-- **HTML, CSS, JavaScript**
-
+- **HTML, CSS, JavaScript, SCSS**
