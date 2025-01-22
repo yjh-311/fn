@@ -67,7 +67,7 @@ const myapp = Vue.createApp({
                 Meaning: "",
                 sub_title: "",
             };
-            this.tuki = 5;
+            //this.tuki = 5;
         },
         openEditModal(project) {
             this.newProject = project; // 선택된 프로젝트 설정
